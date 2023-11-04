@@ -1,0 +1,34 @@
+@import "../utils/variables.scss";
+
+header {
+  width: 100vw;
+  height: 8rem;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  position: fixed;
+
+  img {
+    position: absolute;
+    margin-left: 2rem;
+  }
+
+  nav {
+    position: absolute;
+    width: 100vw;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+
+    a {
+      margin: 0 2rem 0 2rem;
+    }
+  }
+}
+
+hr {
+  width: 50%;
+  height: 0.1px;
+  color: $text;
+  margin-top: 8rem;
+}

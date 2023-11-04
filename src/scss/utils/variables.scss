@@ -1,0 +1,28 @@
+$primary: #134611;
+$primary-light: #abe188;
+$secondary: #3aafb9;
+$bg1: #000c15;
+$bg2: #001a2b;
+$text: #f2f5ea;
+$link: #9dd1f1;
+
+// Mixin
+@mixin bg-gradient() {
+  background: rgb(0, 26, 43);
+  background: -moz-radial-gradient(
+    circle,
+    rgba(0, 26, 43, 1) 0%,
+    rgba(0, 12, 21, 1) 80%
+  );
+  background: -webkit-radial-gradient(
+    circle,
+    rgba(0, 26, 43, 1) 0%,
+    rgba(0, 12, 21, 1) 80%
+  );
+  background: radial-gradient(
+    circle,
+    rgba(0, 26, 43, 1) 0%,
+    rgba(0, 12, 21, 1) 80%
+  );
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#001a2b",endColorstr="#000c15",GradientType=1);
+}

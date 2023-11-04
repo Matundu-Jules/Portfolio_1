@@ -1,15 +1,26 @@
 <!doctype html>
-<html lang="en">
+<html lang="fr">
   <head>
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/images/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script type="module" src="/src/typescript/main.ts"></script>
     <title>Accueil - Matundu Jules</title>
   </head>
   <body>
-    <div id="header"></div>
-    <div id="app"></div>
-    <script type="module" src="/src/typescript/includes/header.ts"></script>
-    <script type="module" src="/src/typescript/main.ts"></script>
+    <header>
+      <img
+        class="header-logo"
+        src="/images/typescript.svg"
+        alt="Logo du portfolio de Matundu Jules"
+      />
+      <nav>
+        <a href="#" class="active">Accueil</a>
+        <a href="src/pages/about.html">A propos</a>
+        <a href="src/pages/projects.html">Mes projets</a>
+        <a href="src/pages/contact.html">Contact</a>
+      </nav>
+    </header>
+    <hr />
   </body>
 </html>

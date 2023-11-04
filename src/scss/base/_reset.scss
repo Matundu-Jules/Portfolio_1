@@ -1,0 +1,48 @@
+@import "../utils/variables.scss";
+
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+  font-size: 62.5%; /* 1rem = 10px */
+  box-sizing: border-box;
+
+  color-scheme: light dark;
+  color: $text;
+  @include bg-gradient();
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+}
+
+a {
+  font-weight: 500;
+  color: $text;
+  text-decoration: inherit;
+}
+a:hover {
+  transition: all 0.2s ease-in-out;
+  color: $link;
+  text-decoration: underline;
+}
+a.active {
+  color: $link;
+}
+
+body {
+  margin: 0;
+  display: flex;
+  place-items: center;
+  flex-direction: column;
+  min-width: 320px;
+  min-height: 100vh;
+  font-size: 1.6rem;
+}
+
+h1 {
+  font-size: 3.2em;
+  line-height: 1.1;
+}
