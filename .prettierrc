@@ -11,9 +11,15 @@
       }
     },
     {
+      "files": "*.html",
+      "options": {
+        "printWidth": 140
+      }
+    },
+    {
       "files": "*.ts",
       "options": {
-        "trailingComma": "all",
+        "trailingComma": "es5",
         "tabWidth": 4,
         "semi": false,
         "singleQuote": true,

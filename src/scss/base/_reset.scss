@@ -18,6 +18,29 @@
   -webkit-text-size-adjust: 100%;
 }
 
+body {
+  margin: 0;
+  display: flex;
+  place-items: center;
+  flex-direction: column;
+  min-width: 320px;
+  min-height: 100vh;
+  font-size: 1.6rem;
+}
+
+main {
+  margin-top: 8rem;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
 a {
   font-weight: 500;
   color: $text;
@@ -32,17 +55,11 @@ a.active {
   color: $link;
 }
 
-body {
-  margin: 0;
-  display: flex;
-  place-items: center;
-  flex-direction: column;
-  min-width: 320px;
-  min-height: 100vh;
-  font-size: 1.6rem;
-}
-
 h1 {
   font-size: 3.2em;
   line-height: 1.1;
+}
+
+cite {
+  text-align: center;
 }
