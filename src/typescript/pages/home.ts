@@ -1,6 +1,15 @@
+import '../../scss/components/loader.scss'
 import '../../scss/main.scss'
 import '../../scss/pages/home.scss'
-import { generateQuote } from '../features/generate_quote'
+import { generateServices } from '../features/generate_services'
+import { loader } from '../features/loader'
+import { responsiveMenu } from '../features/responsive_menu'
+
+// Lancement du loader
+loader()
 
 // Générateur de citations
-setInterval(generateQuote, 5000)
+setInterval(generateServices, 5000)
+
+// Gestion du menu sur le responsive
+responsiveMenu()
