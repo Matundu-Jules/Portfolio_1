@@ -60,5 +60,6 @@
 
 .hidden-content {
   opacity: 0;
-  transition: opacity 0.5s ease-in-out;
+  visibility: hidden;
+  transition: opacity 3s ease-in-out;
 }
