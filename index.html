@@ -5,14 +5,14 @@
     <link
       rel="icon"
       type="image/svg+xml"
-      href="/images/logo_without_text.png"
+      href="./assets/images/logo_without_text.png"
     />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script
       src="https://kit.fontawesome.com/b9db67eb6a.js"
       crossorigin="anonymous"
     ></script>
-    <script type="module" src="/src/typescript/pages/home.ts"></script>
+    <script type="module" src="./index.js"></script>
     <title>Accueil - Matundu Jules</title>
   </head>
   <body>
@@ -20,7 +20,7 @@
       <div class="loader">
         <div class="loader-circle">
           <img
-            src="/images/logo_without_text.png"
+            src="./assets/images/logo_without_text.png"
             alt="Logo du portfolio de Matundu Jules"
           />
         </div>
@@ -30,10 +30,14 @@
 
     <div class="hidden-content" style="display: none">
       <header>
-        <a class="header-img-container" href="#">
+        <a
+          class="header-img-container"
+          href="#"
+          title="Retour à la page d'accueil"
+        >
           <img
             class="header-logo"
-            src="/images/logo_without_text.png"
+            src="./assets/images/logo_without_text.png"
             alt="Logo du portfolio de Matundu Jules"
           />
           Matundu Jules
@@ -45,15 +49,15 @@
 
         <nav role="navigation">
           <a href="#" class="active">Accueil</a>
-          <a href="src/pages/about.html">A propos</a>
-          <a href="src/pages/projects.html">Mes projets</a>
-          <a href="src/pages/contact.html">Contact</a>
+          <a href="./about/about.html">A propos</a>
+          <a href="./projects/projects.html">Mes projets</a>
+          <a href="./contact/contact.html">Contact</a>
         </nav>
       </header>
       <main>
         <div class="banner-container">
           <img
-            src="/images/banner/webdesign.jpg"
+            src="./assets/images/banner/webdesign.jpg"
             alt=""
             class="banner-img banner-fade"
           />
