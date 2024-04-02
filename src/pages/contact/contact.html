@@ -5,39 +5,30 @@
     <link
       rel="icon"
       type="image/svg+xml"
-      href="./assets/images/logo_without_text.png"
+      href="../../assets/images/logo_without_text.png"
     />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script
       src="https://kit.fontawesome.com/b9db67eb6a.js"
       crossorigin="anonymous"
     ></script>
-    <script type="module" src="./index.js"></script>
-    <title>Accueil - Matundu Jules</title>
+    <title>Contact - Matundu Jules</title>
   </head>
-  <body>
-    <div class="loader-wrapper">
-      <div class="loader">
-        <div class="loader-circle">
-          <img
-            src="./assets/images/logo_without_text.png"
-            alt="Logo du portfolio de Matundu Jules"
-          />
-        </div>
-      </div>
-      <p>Matundu Jules</p>
-    </div>
-
-    <div class="hidden-content" style="display: none">
+  <body data-barba="wrapper">
+    <div
+      class="page-container"
+      data-barba="container"
+      data-barba-namespace="contact"
+    >
       <header>
         <a
           class="header-img-container"
-          href="#"
+          href="../../index.html"
           title="Retour à la page d'accueil"
         >
           <img
             class="header-logo"
-            src="./assets/images/logo_without_text.png"
+            src="../../assets/images/logo_without_text.png"
             alt="Logo du portfolio de Matundu Jules"
           />
           Matundu Jules
@@ -48,23 +39,14 @@
         </button>
 
         <nav role="navigation">
-          <a href="#" class="active">Accueil</a>
-          <a href="./about/about.html">A propos</a>
-          <a href="./projects/projects.html">Mes projets</a>
-          <a href="./contact/contact.html">Contact</a>
+          <a href="../../index.html">Accueil</a>
+          <a href="../about/about.html">A propos</a>
+          <a href="../projects/projects.html">Mes projets</a>
+          <a href="#" class="active">Contact</a>
         </nav>
       </header>
       <main>
-        <div class="banner-container">
-          <img
-            src="./assets/images/banner/webdesign.jpg"
-            alt=""
-            class="banner-img banner-fade"
-          />
-          <div class="banner-text-block">
-            <p class="banner-title banner-fade">Création de sites web</p>
-          </div>
-        </div>
+        <h1>Contact</h1>
       </main>
       <footer>
         <p>Matundu Jules-Langa © 2023</p>
@@ -79,6 +61,10 @@
           ></a>
         </div>
       </footer>
+      <script type="module" src="./contact.js"></script>
     </div>
+    <!-- barba end-->
+
+    <!-- <script type="module" src="../../index.js"></script> -->
   </body>
 </html>

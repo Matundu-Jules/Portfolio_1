@@ -1,4 +1,4 @@
-@import "../assets/styles/utils/variables.scss";
+@import "../../styles/utils/variables.scss";
 
 h2 {
   text-align: center;
@@ -57,7 +57,7 @@ h2 {
 
   &::before {
     content: "";
-    background-image: url("/assets/images/exp-thumbnail/entertainer.jpg");
+    background-image: url("../../assets/images/exp-thumbnail/entertainer.jpg");
     background-size: cover;
     background-position: 70% 20%;
     position: absolute;
@@ -92,7 +92,7 @@ h2 {
 
   &::before {
     content: "";
-    background-image: url("/assets/images/exp-thumbnail/dance.jpg");
+    background-image: url("../../assets/images/exp-thumbnail/dance.jpg");
     background-size: cover;
     background-position: 70% 50%;
     position: absolute;
@@ -125,7 +125,7 @@ h2 {
 
   &::before {
     content: "";
-    background-image: url("/assets/images/exp-thumbnail/webdev.jpg");
+    background-image: url("../../assets/images/exp-thumbnail/webdev.jpg");
     background-size: cover;
     background-position: 50%;
     position: absolute;
@@ -159,7 +159,7 @@ h2 {
 
   &::before {
     content: "";
-    background-image: url("/assets/images/exp-thumbnail/fiber.jpg");
+    background-image: url("../../assets/images/exp-thumbnail/fiber.jpg");
     background-size: cover;
     background-position: 0% 15%;
     position: absolute;

@@ -9,7 +9,7 @@
 
   color-scheme: light dark;
   color: $text;
-  @include bg-gradient();
+  // @include bg-gradient();
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;

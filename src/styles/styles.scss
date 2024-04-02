@@ -3,12 +3,18 @@
 @import "layout/_header.scss";
 @import "layout/_footer.scss";
 @import "components/loader.scss";
+@import "components/fade.scss";
 
 #app {
   max-width: 1280px;
   margin: 0 auto;
   padding: 2rem;
   text-align: center;
+}
+
+.page-container {
+  width: 100%;
+  min-height: 100vh;
 }
 
 .logo {
