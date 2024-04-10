@@ -15,84 +15,77 @@
     <title>A propos - Matundu Jules</title>
   </head>
   <body data-barba="wrapper">
-    <div
-      class="page-container"
-      data-barba="container"
-      data-barba-namespace="about"
-    >
-      <header>
-        <a
-          class="header-img-container"
-          href="../../index.html"
-          title="Retour à la page d'accueil"
+    <header>
+      <a
+        class="header-img-container"
+        href="../../index.html"
+        title="Retour à la page d'accueil"
+      >
+        <img
+          class="header-logo"
+          src="../../assets/images/logo_without_text.png"
+          alt="Logo du portfolio de Matundu Jules"
+        />
+        Matundu Jules
+      </a>
+
+      <button class="hamburger" aria-label="Menu">
+        <i class="fa-solid fa-bars"></i>
+      </button>
+
+      <nav role="navigation">
+        <a id="home-nav-link" href="../../index.html">Accueil</a>
+        <a id="about-nav-link" href="#" class="active">A propos</a>
+        <a id="projects-nav-link" href="../projects/projects.html"
+          >Mes projets</a
         >
-          <img
-            class="header-logo"
-            src="../../assets/images/logo_without_text.png"
-            alt="Logo du portfolio de Matundu Jules"
-          />
-          Matundu Jules
-        </a>
+        <a id="contact-nav-link" href="../contact/contact.html">Contact</a>
+      </nav>
+    </header>
 
-        <button class="hamburger" aria-label="Menu">
-          <i class="fa-solid fa-bars"></i>
-        </button>
+    <main data-barba="container" data-barba-namespace="about">
+      <h2>Mes expériences</h2>
+      <div class="container">
+        <a
+          class="triangle triangle1"
+          href="../entertainer/entertainer.html"
+          title="En savoir plus sur mon expérience d'animateur"
+          ><p>Animateur</p></a
+        >
+        <a
+          class="triangle triangle2"
+          href="../hiphop/hiphop.html"
+          title="En savoir plus sur mon expérience de danseur hip-hop"
+          ><p>Danse HipHop</p></a
+        >
+        <a
+          class="triangle triangle3"
+          href="../webdev/webdev.html"
+          title="En savoir plus sur mon expérience de développeur web"
+          ><p>Développeur Web</p></a
+        >
+        <a
+          class="triangle triangle4"
+          href="../fiber/fiber.html"
+          title="En savoir plus sur mon expérience de technicien fibre optique"
+          ><p>Technicien fibre optique</p></a
+        >
+      </div>
+    </main>
 
-        <nav role="navigation">
-          <a href="../../index.html">Accueil</a>
-          <a href="#" class="active">A propos</a>
-          <a href="../projects/projects.html">Mes projets</a>
-          <a href="../contact/contact.html">Contact</a>
-        </nav>
-      </header>
-
-      <main>
-        <h2>Mes expériences</h2>
-        <div class="container">
-          <a
-            class="triangle triangle1"
-            href="./entertainer"
-            title="En savoir plus sur mon expérience d'animateur"
-            ><p>Animateur</p></a
-          >
-          <a
-            class="triangle triangle2"
-            href="./hiphop"
-            title="En savoir plus sur mon expérience de danseur hip-hop"
-            ><p>Danse HipHop</p></a
-          >
-          <a
-            class="triangle triangle3"
-            href="./webdev"
-            title="En savoir plus sur mon expérience de développeur web"
-            ><p>Développeur Web</p></a
-          >
-          <a
-            class="triangle triangle4"
-            href="./fiber"
-            title="En savoir plus sur mon expérience de technicien fibre optique"
-            ><p>Technicien fibre optique</p></a
-          >
-        </div>
-      </main>
-
-      <footer>
-        <p>Matundu Jules-Langa © 2023</p>
-        <div class="footer-social">
-          <a href="https://github.com/Matundu-Jules" class="github"
-            ><i class="fa-brands fa-github"></i
-          ></a>
-          <a
-            href="https://www.linkedin.com/in/jules-langa-matundu/"
-            class="linkedin"
-            ><i class="fa-brands fa-linkedin"></i
-          ></a>
-        </div>
-      </footer>
-      <script type="module" src="./about.js"></script>
-    </div>
-    <!-- barba end-->
-
-    <!-- <script type="module" src="../../index.js"></script> -->
+    <footer>
+      <p>Matundu Jules-Langa © 2023</p>
+      <div class="footer-social">
+        <a href="https://github.com/Matundu-Jules" class="github"
+          ><i class="fa-brands fa-github"></i
+        ></a>
+        <a
+          href="https://www.linkedin.com/in/jules-langa-matundu/"
+          class="linkedin"
+          ><i class="fa-brands fa-linkedin"></i
+        ></a>
+      </div>
+    </footer>
+    <script type="module" src="./about.js"></script>
   </body>
 </html>

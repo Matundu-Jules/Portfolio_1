@@ -28,66 +28,117 @@
     </div> -->
 
     <!-- <div class="hidden-content" style="display: none"> -->
-    <div
-      class="page-container"
-      data-barba="container"
-      data-barba-namespace="home"
-    >
-      <header>
-        <a
-          class="header-img-container"
-          href="#"
-          title="Retour à la page d'accueil"
+    <header>
+      <a
+        class="header-img-container"
+        href="#"
+        title="Retour à la page d'accueil"
+      >
+        <img
+          class="header-logo"
+          src="/assets/images/logo_without_text.png"
+          alt="Logo du portfolio de Matundu Jules"
+        />
+        Matundu Jules
+      </a>
+
+      <button class="hamburger" aria-label="Menu">
+        <i class="fa-solid fa-bars"></i>
+      </button>
+
+      <nav role="navigation">
+        <a id="home-nav-link" href="#" class="active">Accueil</a>
+        <a id="about-nav-link" href="/pages/about/about.html">A propos</a>
+        <a id="projects-nav-link" href="/pages/projects/projects.html"
+          >Mes projets</a
         >
-          <img
-            class="header-logo"
-            src="/assets/images/logo_without_text.png"
-            alt="Logo du portfolio de Matundu Jules"
-          />
-          Matundu Jules
-        </a>
+        <a id="contact-nav-link" href="/pages/contact/contact.html">Contact</a>
+      </nav>
+    </header>
 
-        <button class="hamburger" aria-label="Menu">
-          <i class="fa-solid fa-bars"></i>
-        </button>
-
-        <nav role="navigation">
-          <a href="#" class="active">Accueil</a>
-          <a href="/pages/about/about.html">A propos</a>
-          <a href="/pages/projects/projects.html">Mes projets</a>
-          <a href="/pages/contact/contact.html">Contact</a>
-        </nav>
-      </header>
-
-      <main>
-        <div class="banner-container">
-          <img
-            src="/assets/images/banner/webdesign.jpg"
-            alt=""
-            class="banner-img banner-fade"
-          />
-          <div class="banner-text-block">
-            <p class="banner-title banner-fade">Création de sites web</p>
-          </div>
+    <main data-barba="container" data-barba-namespace="home">
+      <div class="banner-container">
+        <img
+          src="/assets/images/banner/webdesign.jpg"
+          alt=""
+          class="banner-img banner-fade"
+        />
+        <div class="banner-text-block">
+          <p class="banner-title banner-fade">Création de sites web</p>
         </div>
-      </main>
+      </div>
 
-      <footer>
-        <p>Matundu Jules-Langa © 2023</p>
-        <div class="footer-social">
-          <a href="https://github.com/Matundu-Jules" class="github"
-            ><i class="fa-brands fa-github"></i
-          ></a>
-          <a
-            href="https://www.linkedin.com/in/jules-langa-matundu/"
-            class="linkedin"
-            ><i class="fa-brands fa-linkedin"></i
-          ></a>
+      <h1>
+        Portfolio de Jules-Langa Matundu <br />
+        En Route vers l'Expertise en Systèmes, Réseaux et Sécurité
+      </h1>
+
+      <section id="home-about-me">
+        <h2>À propos de moi</h2>
+        <div class="home-about-me-container">
+          <img
+            src="assets/images/img_profil.jpg"
+            alt="Photo de profil"
+            id="home-about-me-img"
+          />
+          <p id="home-about-me-txt">
+            Jules-Langa Matundu, 26 ans, je suis en recherche d'alternance en
+            administration de systèmes, réseaux et sécurité. <br /><br />
+            Mon parcours diversifié en développement web et télécommunications,
+            enrichi par ma passion pour la danse Hip-Hop, illustre ma capacité à
+            allier compétences techniques et créativité. <br />
+            Prêt à relever de nouveaux défis, je vise à mettre mon expertise au
+            service d'un environnement innovant. <br /><br />
+            <a href="pages/about/about.html"
+              >Plus d'information sur mon parcours</a
+            >
+          </p>
         </div>
-      </footer>
-      <!-- </div> -->
-      <script type="module" src="./index.js"></script>
-    </div>
-    <!-- barba end-->
+      </section>
+      <section id="skills">
+        <h2>Compétences Vedettes</h2>
+        <ul>
+          <li>JavaScript & TypeScript</li>
+          <li>React & React Native</li>
+          <li>CSS, SASS</li>
+          <li>HTML</li>
+          <li>Home Assistant</li>
+        </ul>
+      </section>
+      <section id="projects">
+        <h2>Derniers Projets</h2>
+        <div class="project">
+          <h3>Application et Site Web CLEM</h3>
+          <p>Brève description du projet.</p>
+        </div>
+        <div class="project">
+          <h3>Iot : Proposition et amménagement d'une maison connectées</h3>
+          <p>Brève description du projet.</p>
+        </div>
+      </section>
+      <section id="contact">
+        <h2>Contactez-Moi</h2>
+        <p>
+          Intéressé par une collaboration ? N'hésitez pas à me contacter via
+          <a href="mailto:votre.email@example.com">votre.email@example.com</a>
+        </p>
+      </section>
+    </main>
+
+    <footer>
+      <p>© 2024 Matundu Jules-Langa. Tous droits réservés.</p>
+      <div class="footer-social">
+        <a href="https://github.com/Matundu-Jules" class="github"
+          ><i class="fa-brands fa-github"></i
+        ></a>
+        <a
+          href="https://www.linkedin.com/in/jules-langa-matundu/"
+          class="linkedin"
+          ><i class="fa-brands fa-linkedin"></i
+        ></a>
+      </div>
+    </footer>
+    <!-- </div> -->
+    <script type="module" src="./index.js"></script>
   </body>
 </html>

@@ -3,15 +3,17 @@
 
 header {
   width: 100%;
-  height: 8rem;
+  height: $header-size;
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: center;
   position: fixed;
+  background: $bg1;
+  z-index: 1;
 
   .header-img-container {
-    height: 8rem;
+    height: $header-size;
     display: flex;
     align-items: center;
     justify-content: center;

@@ -32,7 +32,7 @@ let srcBannerImg = [
     '/assets/images/banner/fiber41.jpg',
 ]
 
-let index = 1
+let index = 0
 
 // Afficher les services toutes les 5 secondes
 export function generateServices() {
@@ -53,10 +53,10 @@ export function generateServices() {
                 imgBannerElem.src = srcBannerImg[index]
 
                 // Ajout de la classe pour l'effet de transition
-                bannerTitleElem?.classList.add('banner-fade')
-                imgBannerElem?.classList.add('banner-fade')
+                bannerTitleElem.classList.add('banner-fade')
+                imgBannerElem.classList.add('banner-fade')
             })
-        }, 225)
+        }, 1000)
     }
 
     // Passer à la citation suivante et revenir au début si on a atteint la fin du tableau

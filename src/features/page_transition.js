@@ -1,5 +1,4 @@
 import barba from '@barba/core'
-import barbaCss from '@barba/css'
 import gsap from 'gsap'
 
 // Effets de transition
@@ -7,56 +6,138 @@ export const pageTransition = () => {
     barba.init({
         transitions: [
             {
-                name: 'default',
+                name: 'home',
                 to: {
-                    namespace: ['home', 'about', 'contact', 'projects'],
+                    namespace: [
+                        'home',
+                        'about',
+                        'contact',
+                        'projects',
+                        'entertainer',
+                        'fiber',
+                        'hiphop',
+                        'webdev',
+                    ],
                 },
                 leave(data) {
-                    console.log(data)
                     return gsap.to(data.current.container, {
                         opacity: 0,
                     })
                 },
-                enter(data) {
-                    console.log(data)
+                beforeEnter(data) {
+                    window.scrollTo(0, 0)
 
-                    return gsap.from(data.next.container, {
-                        opacity: 1,
-                    })
+                    const currentNamespace = data.next.namespace
+                    const oldNamespace = data.current.namespace
+
+                    const oldURL = data.current.url.href
+
+                    switch (currentNamespace) {
+                        case 'home':
+                            loadScript('index')
+                            setActiveLink(
+                                currentNamespace,
+                                oldNamespace,
+                                oldURL
+                            )
+                            break
+                        case 'about':
+                            loadScript('about')
+                            setActiveLink(
+                                currentNamespace,
+                                oldNamespace,
+                                oldURL
+                            )
+                            break
+                        case 'contact':
+                            loadScript('contact')
+                            setActiveLink(
+                                currentNamespace,
+                                oldNamespace,
+                                oldURL
+                            )
+                            break
+                        case 'projects':
+                            loadScript('projects')
+                            setActiveLink(
+                                currentNamespace,
+                                oldNamespace,
+                                oldURL
+                            )
+                            break
+                        case 'entertainer':
+                            loadScript('entertainer')
+                            break
+                        case 'fiber':
+                            loadScript('fiber')
+                            break
+                        case 'hiphop':
+                            loadScript('hiphop')
+                            break
+                        case 'webdev':
+                            loadScript('webdev')
+                            break
+                        default:
+                    }
+                },
+                enter(data) {
+                    console.log('ENTER DATA : ', data)
+                    gsap.fromTo(
+                        data.next.container,
+                        { opacity: 0 },
+                        {
+                            opacity: 1,
+                            duration: 0.8,
+                        }
+                    )
                 },
             },
         ],
     })
 }
 
-// Écouteur pour l'événement avant d'entrer dans une nouvelle page
-// barba.hooks.beforeEnter((data) => {
-//     console.log('beforeEnter', {
-//         nextNamespace: data.next.namespace,
-//         currentNamespace: data.current.namespace,
-//     })
-// })
+function loadScript(name) {
+    let script = document.createElement('script')
 
-// Écouteur pour l'événement après être entré dans une nouvelle page
-// barba.hooks.afterEnter((data) => {
-//     console.log('afterEnter', {
-//         nextNamespace: data.next.namespace,
-//         currentNamespace: data.current.namespace,
-//     })
-// })
+    if (name === 'index') {
+        script.src = `../${name}.js`
+    } else {
+        script.src = `./${name}.js`
+    }
 
-// Écouteur pour l'événement avant de quitter la page actuelle
-// barba.hooks.beforeLeave((data) => {
-//     console.log('beforeLeave', {
-//         nextNamespace: data.next.namespace,
-//         currentNamespace: data.current.namespace,
-//     })
-// })
+    script.type = 'module'
+    document.body.appendChild(script)
 
-// Écouteur pour l'événement après avoir quitté la page actuelle
-// barba.hooks.afterLeave((data) => {
-//     console.log('afterLeave', {
-//         nextNamespace: data.next.namespace,
-//         currentNamespace: data.current.namespace,
-//     })
-// })
+    script.onload = () => {
+        console.log(`Le script de la page de ${name} a été chargé avec succès.`)
+    }
+
+    script.onerror = () => {
+        console.error(
+            `Erreur lors du chargement du script de la page de ${name}.`
+        )
+    }
+}
+
+function setActiveLink(currentNamespace, oldNamespace, oldURL) {
+    let currentLink = document.querySelector(`#${currentNamespace}-nav-link`)
+    currentLink.removeAttribute('href')
+    currentLink.classList.add('active')
+
+    if (
+        oldNamespace === 'entertainer' ||
+        oldNamespace === 'fiber' ||
+        oldNamespace === 'hiphop' ||
+        oldNamespace === 'webdev'
+    ) {
+        let oldLink = document.querySelector(`#about-nav-link`)
+        oldLink.href = 'http://localhost:5173/pages/about/about.html'
+        oldLink.classList.remove('active')
+    } else {
+        let oldLink = document.querySelector(`#${oldNamespace}-nav-link`)
+        oldLink.href = oldURL
+        oldLink.classList.remove('active')
+    }
+}
+
+function setActiveLinkSubPage(currentNamespace, oldNamespace, oldURL) {}
