@@ -5,7 +5,7 @@
     <link
       rel="icon"
       type="image/svg+xml"
-      href="../../assets/images/logo_without_text.png"
+      href="/assets/images/logo_without_text.png"
     />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script
@@ -18,12 +18,12 @@
     <header>
       <a
         class="header-img-container"
-        href="../../index.html"
+        href="/index.html"
         title="Retour à la page d'accueil"
       >
         <img
           class="header-logo"
-          src="../../assets/images/logo_without_text.png"
+          src="/assets/images/logo_without_text.png"
           alt="Logo du portfolio de Matundu Jules"
         />
         Matundu Jules
@@ -34,12 +34,51 @@
       </button>
 
       <nav role="navigation">
-        <a id="home-nav-link" href="../../index.html">Accueil</a>
-        <a id="about-nav-link" href="#" class="active">A propos</a>
-        <a id="projects-nav-link" href="../projects/projects.html"
+        <a id="home-nav-link" href="/index.html">Accueil</a>
+        <div class="dropdown">
+          <a
+            id="about-nav-link"
+            class="dropbtn active"
+            id="about-nav-link"
+            href="/pages/about/about.html"
+            >A propos</a
+          >
+          <div class="header-extend"></div>
+          <div class="dropdown-content">
+            <div class="dropdown-content-extend"></div>
+
+            <!-- Sous-menu pour Expériences -->
+            <div class="dropdown-sub dropdown-sub-experiences">
+              <a class="dropdown-sub-menu menu-experiences">Expériences</a>
+              <div class="dropdown-content-sub menu-experiences-content">
+                <a href="/pages/entertainer/entertainer.html">Animateur</a>
+                <a href="/pages/hiphop/hiphop.html">Danse HipHop</a>
+                <a href="/pages/webdev/webdev.html">Développeur Web</a>
+                <a href="/pages/fiber/fiber.html">Technicien Fibre Optique</a>
+              </div>
+            </div>
+            <!-- Sous-menu pour Formations -->
+            <div class="dropdown-sub dropdown-sub-formation">
+              <a class="dropdown-sub-menu menu-formation">Formations</a>
+              <div class="dropdown-content-sub menu-formation-content">
+                <a href="/pages/sen/sen.html"
+                  >Systèmes Électroniques Numériques</a
+                >
+                <a href="/pages/entertainer/entertainer_degree.html"
+                  >Animation</a
+                >
+                <a href="/pages/webdev/webdev_degree.html">Développeur Web</a>
+                <a href="/pages/telecom/telecom_degree.html"
+                  >Télécom / Smart City / IoT</a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+        <a id="projects-nav-link" href="/pages/projects/projects.html"
           >Mes projets</a
         >
-        <a id="contact-nav-link" href="../contact/contact.html">Contact</a>
+        <a id="contact-nav-link" href="/pages/contact/contact.html">Contact</a>
       </nav>
     </header>
 
@@ -48,25 +87,25 @@
       <div class="container">
         <a
           class="triangle triangle1"
-          href="../entertainer/entertainer.html"
+          href="/pages/entertainer/entertainer.html"
           title="En savoir plus sur mon expérience d'animateur"
           ><p>Animateur</p></a
         >
         <a
           class="triangle triangle2"
-          href="../hiphop/hiphop.html"
+          href="/pages/hiphop/hiphop.html"
           title="En savoir plus sur mon expérience de danseur hip-hop"
           ><p>Danse HipHop</p></a
         >
         <a
           class="triangle triangle3"
-          href="../webdev/webdev.html"
+          href="/pages/webdev/webdev.html"
           title="En savoir plus sur mon expérience de développeur web"
           ><p>Développeur Web</p></a
         >
         <a
           class="triangle triangle4"
-          href="../fiber/fiber.html"
+          href="/pages/fiber/fiber.html"
           title="En savoir plus sur mon expérience de technicien fibre optique"
           ><p>Technicien fibre optique</p></a
         >
@@ -74,7 +113,7 @@
     </main>
 
     <footer>
-      <p>Matundu Jules-Langa © 2023</p>
+      <p>© 2024 Matundu Jules-Langa. Tous droits réservés.</p>
       <div class="footer-social">
         <a href="https://github.com/Matundu-Jules" class="github"
           ><i class="fa-brands fa-github"></i
@@ -86,6 +125,6 @@
         ></a>
       </div>
     </footer>
-    <script type="module" src="./about.js"></script>
+    <script type="module" src="/pages/about/about.js"></script>
   </body>
 </html>

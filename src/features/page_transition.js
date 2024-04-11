@@ -14,9 +14,13 @@ export const pageTransition = () => {
                         'contact',
                         'projects',
                         'entertainer',
+                        'entertainer_degree',
                         'fiber',
                         'hiphop',
                         'webdev',
+                        'webdev_degree',
+                        'sen',
+                        'telecom_degree',
                     ],
                 },
                 leave(data) {
