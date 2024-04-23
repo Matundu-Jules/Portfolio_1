@@ -31,9 +31,10 @@ main {
   margin-top: 8rem;
   width: 100%;
   min-height: calc(100vh - ($header-size + $footer-size + 1rem));
-  // display: flex;
-  // flex-direction: column;
-  // justify-content: center;
+}
+
+section {
+  margin: 6rem 0;
 }
 
 img {

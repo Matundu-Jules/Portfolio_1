@@ -96,6 +96,7 @@ export const pageTransition = () => {
                     )
                 },
             },
+            // Ajout d'une 2eme transition pour charger le loader sur la page d'accueil (beforeEnter ou enter ? à tester)
         ],
     })
 }

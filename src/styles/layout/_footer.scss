@@ -9,6 +9,10 @@ footer {
   flex-direction: column;
   border-top: 1px solid $text;
 
+  p {
+    margin-bottom: 1rem;
+  }
+
   .footer-social {
     .fa-brands {
       font-size: 3rem;

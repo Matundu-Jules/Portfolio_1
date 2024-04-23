@@ -95,7 +95,11 @@
       </nav>
     </header>
 
-    <main data-barba="container" data-barba-namespace="home">
+    <main
+      data-barba="container"
+      data-barba-namespace="home"
+      id="home-container"
+    >
       <div class="banner-container">
         <img
           src="/assets/images/banner/webdesign.jpg"
@@ -112,51 +116,129 @@
         En Route vers l'Expertise en Systèmes, Réseaux et Sécurité
       </h1>
 
-      <section id="home-about-me">
+      <section id="about">
         <h2>À propos de moi</h2>
-        <div class="home-about-me-container">
-          <img
-            src="/assets/images/img_profil.jpg"
-            alt="Photo de profil"
-            id="home-about-me-img"
-          />
-          <p id="home-about-me-txt">
-            Jules-Langa Matundu, 26 ans, je suis en recherche d'alternance en
-            administration de systèmes, réseaux et sécurité. <br /><br />
-            Mon parcours diversifié en développement web et télécommunications,
-            enrichi par ma passion pour la danse Hip-Hop, illustre ma capacité à
-            allier compétences techniques et créativité. <br />
-            Prêt à relever de nouveaux défis, je vise à mettre mon expertise au
-            service d'un environnement innovant. <br /><br />
-            <a href="/pages/about/about.html"
-              >Plus d'information sur mon parcours</a
-            >
-          </p>
+        <div class="about-container">
+          <div id="about-img-container">
+            <img
+              src="/assets/images/img_profil.jpg"
+              alt="Photo de profil"
+              id="about-img"
+            />
+          </div>
+          <div id="about-txt-container">
+            <p>
+              Bonjour, moi c'est Jules-Langa Matundu,<br />
+              Actuellement, je suis en recherche d'alternance en administration
+              de systèmes, réseaux et sécurité. <br /><br />
+              Mon parcours diversifié en développement web et
+              télécommunications, enrichi par ma passion pour la danse Hip-Hop,
+              illustre ma capacité à allier compétences techniques et
+              créativité. <br />
+              Prêt à relever de nouveaux défis, je vise à mettre mon expertise
+              au service d'un environnement innovant.
+            </p>
+          </div>
         </div>
       </section>
       <section id="skills">
         <h2>Compétences Vedettes</h2>
-        <ul>
-          <li>JavaScript & TypeScript</li>
-          <li>React & React Native</li>
-          <li>CSS, SASS</li>
-          <li>HTML</li>
-          <li>Home Assistant</li>
-        </ul>
+        <div class="skill-category">
+          <h3>Développement Web</h3>
+          <ul>
+            <li><p>HTML, CSS, SASS</p></li>
+            <li><p>JavaScript, Node.js, React</p></li>
+            <li><p>Mongo DB, PostgreSQL</p></li>
+            <li><p>SEO, Optimisation, Accessibilité web</p></li>
+            <li><p>No-code, Wordpress</p></li>
+            <li><p>Règlementations (CNIL, RGPD, ANSSI, WCAG)</p></li>
+          </ul>
+        </div>
+        <div class="skill-category">
+          <h3>Réseaux Informatiques et Sécurité</h3>
+          <ul>
+            <li><p>Linux, Ubuntu, Windows</p></li>
+            <li><p>Adressage IP, Routage, Cisco Packet Tracer</p></li>
+            <li><p>Virtualisation</p></li>
+            <li><p>IoT, Home Assistant</p></li>
+            <li><p>Installation de caméras de vidéo-surveillance</p></li>
+            <li><p>Protocoles de communications sans fil</p></li>
+          </ul>
+        </div>
+        <div class="skill-category">
+          <h3>Télécommunications - Fibre optique</h3>
+          <!-- <h4>Fibre optique</h4> -->
+          <ul>
+            <li><p>Raccordement aérien, souterrain, aero-souterrain</p></li>
+            <li><p>SAV, PLP</p></li>
+            <li><p>Règlementations (ARCEP, ARCOM)</p></li>
+            <li><p>Diagnostics et réflectométrie</p></li>
+            <li><p>CACES R486 Nacelle, Habilitation électrique</p></li>
+            <li><p>AIPR, Habilitation travaux en hauteur</p></li>
+          </ul>
+        </div>
+        <a href="/pages/about/about.html"
+          >Plus d'information sur mon parcours</a
+        >
       </section>
       <section id="projects">
-        <h2>Derniers Projets</h2>
-        <div class="project">
-          <h3>Application et Site Web CLEM</h3>
-          <p>Brève description du projet.</p>
+        <h2>Mes Projets</h2>
+        <div class="project-card">
+          <a href="" class="project-card-link">
+            <div class="project-card-img-container">
+              <img
+                src="/assets/images/projects/clem_logo_title_center.svg"
+                alt="Logo de l'application CLEM"
+                class="project-card-img"
+              />
+            </div>
+
+            <div class="project-card-body">
+              <div class="project-card-details">
+                <p class="project-card-domain">
+                  Développement Web / Application
+                </p>
+                <p class="project-card-date">2023</p>
+              </div>
+              <h3 class="project-card-title">Application et Site Web CLEM</h3>
+              <p class="project-card-description">
+                CLEM était un projet innovant destiné à réinventer le partage
+                audio, en permettant de connecter simultanément plusieurs
+                dispositifs d'écoute sans fil.
+              </p>
+            </div>
+          </a>
         </div>
-        <div class="project">
-          <h3>Iot : Proposition et amménagement d'une maison connectées</h3>
-          <p>Brève description du projet.</p>
+        <div class="project-card">
+          <a href="" class="project-card-link">
+            <div class="project-card-img-container">
+              <img
+                src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/ab/New_Home_Assistant_logo.svg/1200px-New_Home_Assistant_logo.svg.png"
+                alt="Logo de Home Assistant"
+                class="project-card-img"
+              />
+            </div>
+
+            <div class="project-card-body">
+              <div class="project-card-details">
+                <p class="project-card-domain">IoT</p>
+                <p class="project-card-date">2023</p>
+              </div>
+              <h3 class="project-card-title">Home Assistant</h3>
+              <p class="project-card-description">
+                Ce projet visait à maîtriser l'intégration de dispositifs
+                connectés dans un environnement résidentiel, notamment via
+                l'installation de Home Assistant sur Raspberry Pi pour une
+                maison intelligente et interconnectée.​
+              </p>
+            </div>
+          </a>
         </div>
+
+        <a href="/pages/about/about.html">Voir tout mes projets</a>
       </section>
       <section id="contact">
-        <h2>Contactez-Moi</h2>
+        <h2>Contactez-moi</h2>
         <p>
           Intéressé par une collaboration ? N'hésitez pas à me contacter via
           <a href="mailto:votre.email@example.com">votre.email@example.com</a>
