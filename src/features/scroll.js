@@ -1,14 +1,9 @@
-import '/styles/styles.scss'
-import '/index.scss'
-import { responsiveMenu } from '/features/responsive_menu'
+// Suppression de l'event scroll
+export function cleanUpScrollEvent() {
+    document.removeEventListener('wheel', customScroll, { passive: false })
+}
 
-// Gestion du menu sur le responsive
-responsiveMenu()
-
-// Défilement au scroll
-
-document.addEventListener('wheel', customScroll, { passive: false })
-
+// Fonction event scroll
 export function customScroll(e) {
     e.preventDefault()
 
@@ -24,13 +19,13 @@ export function customScroll(e) {
 
     if (nextIndex === 0) {
         // Si l'utilisateur défile vers le haut à partir de la première section
-        console.log('AAAA')
         window.scrollTo({ top: 0, behavior: 'smooth' })
     } else if (nextIndex >= 0 && nextIndex < sections.length) {
         sections[nextIndex].scrollIntoView({ behavior: 'smooth' })
     }
 }
 
+// Récupérer la section en cours
 function getCurrentSection(sections) {
     const headerHeight = 80
 
