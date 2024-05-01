@@ -1,0 +1,16 @@
+@import "/styles/utils/variables.scss";
+
+.my-projects {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  width: 100%;
+  height: calc(100vh - ($header-size + $footer-size + 1px));
+  margin: 0;
+}
+
+.in-work {
+  text-align: center;
+}

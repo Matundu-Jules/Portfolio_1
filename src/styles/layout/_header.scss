@@ -159,11 +159,11 @@ hr {
 
   &:hover {
     .header-extend {
-      display: block;
+      // display: block; // Reactiver les sous-menu de about
     }
 
     .dropdown-content {
-      display: flex;
+      // display: flex; // Reactiver les sous-menu de about
     }
   }
 }

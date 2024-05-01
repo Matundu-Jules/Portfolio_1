@@ -14,7 +14,7 @@
     ></script>
     <title>Accueil - Matundu Jules</title>
   </head>
-  <body data-barba="wrapper">
+  <body data-barba="wrapper" id="home-page">
     <!-- <div class="loader-wrapper">
       <div class="loader">
         <div class="loader-circle">
@@ -229,7 +229,7 @@
                 Ce projet visait à maîtriser l'intégration de dispositifs
                 connectés dans un environnement résidentiel, notamment via
                 l'installation de Home Assistant sur Raspberry Pi pour une
-                maison intelligente et interconnectée.​
+                maison intelligente et interconnectée.
               </p>
             </div>
           </a>
@@ -239,10 +239,45 @@
       </section>
       <section id="contact">
         <h2>Contactez-moi</h2>
-        <p>
-          Intéressé par une collaboration ? N'hésitez pas à me contacter via
-          <a href="mailto:votre.email@example.com">votre.email@example.com</a>
-        </p>
+        <div class="contact-details">
+          <div class="details-container">
+            <!-- <h2>Mes coordonnées</h2> -->
+            <p class="contact-name">
+              <i class="fa-solid fa-user"></i>Matundu Jules-Langa
+            </p>
+            <p class="contact-email">
+              <i class="fa-solid fa-envelope"></i>
+              <a href="mailto:matundu.pro@gmail.com?subject=From website"
+                >matundu.pro@gmail.com</a
+              >
+            </p>
+            <p class="contact-phone">
+              <i class="fa-solid fa-phone"></i>06 61 62 34 24
+            </p>
+            <p class="contact-location">
+              <i class="fa-solid fa-location-dot"></i>Région Île-de-France
+            </p>
+          </div>
+          <div class="socials-container">
+            <!-- <h2>Mes réseaux</h2> -->
+            <p class="contact-linkedin">
+              <i class="fa-brands fa-linkedin"></i
+              ><a
+                href="https://www.linkedin.com/in/jules-langa-matundu"
+                class="contact-social-links"
+                >Jules-Langa Matundu</a
+              >
+            </p>
+            <p class="contact-github">
+              <i class="fa-brands fa-square-github"></i>
+              <a
+                href="https://github.com/Matundu-Jules?tab=repositories"
+                class="contact-social-links"
+                >Matundu-Jules</a
+              >
+            </p>
+          </div>
+        </div>
       </section>
     </main>
 
@@ -261,5 +296,6 @@
     </footer>
     <!-- </div> -->
     <script type="module" src="/index.js"></script>
+    <script type="module" src="/home.js"></script>
   </body>
 </html>

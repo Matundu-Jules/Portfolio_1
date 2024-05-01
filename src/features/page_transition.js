@@ -1,5 +1,6 @@
 import barba from '@barba/core'
 import gsap from 'gsap'
+import { customScroll } from '../home'
 
 // Effets de transition
 export const pageTransition = () => {
@@ -38,7 +39,7 @@ export const pageTransition = () => {
 
                     switch (currentNamespace) {
                         case 'home':
-                            loadScript('index')
+                            loadScript('home')
                             setActiveLink(
                                 currentNamespace,
                                 oldNamespace,
@@ -102,14 +103,20 @@ export const pageTransition = () => {
 }
 
 function loadScript(name) {
+    // Suppression des scripts précédemment chargés, sauf index.js
+    let existingScripts = document.querySelectorAll(
+        'script[type="module"][src*=".js"]'
+    )
+    console.log(existingScripts)
+    existingScripts.forEach((script) => {
+        if (!script.src.includes('index.js')) {
+            script.parentNode.removeChild(script)
+        }
+    })
+
+    // Création et ajout du nouveau script
     let script = document.createElement('script')
-
-    if (name === 'index') {
-        script.src = `../${name}.js`
-    } else {
-        script.src = `./${name}.js`
-    }
-
+    script.src = `./${name}.js`
     script.type = 'module'
     document.body.appendChild(script)
 
