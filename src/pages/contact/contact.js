@@ -3,6 +3,12 @@ import '/pages/contact/contact.scss'
 import { responsiveMenu } from '/features/responsive_menu'
 import { cleanUpScrollEvent } from '/features/scroll'
 
+// Gestion du menu sur le responsive
+responsiveMenu()
+
+// Désactivation du scroll de la homepage
+cleanUpScrollEvent()
+
 export function init() {
     // Gestion du menu sur le responsive
     responsiveMenu()

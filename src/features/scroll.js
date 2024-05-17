@@ -49,3 +49,18 @@ function getCurrentSection(sections) {
     }
     return mostVisibleSection
 }
+
+// Ajout de l'event scroll
+export function setupScrollEvent() {
+    document.addEventListener('wheel', customScroll, { passive: false })
+}
+
+export function updateScrollBehavior() {
+    if (window.innerWidth < 984) {
+        // Désactiver le comportement du scroll
+        cleanUpScrollEvent()
+    } else {
+        // Activer le comportement du scroll
+        setupScrollEvent()
+    }
+}
