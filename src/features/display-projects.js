@@ -126,3 +126,111 @@ function sortProjects(projects) {
         return aCriteria.localeCompare(bCriteria)
     })
 }
+
+export function displayHomeProjects(projects) {
+    const homeProjects = document.querySelectorAll('.project-card')
+
+    // Trier le tableau
+    const sortedProjects = sortProjects(projects)
+
+    homeProjects.forEach((projectCard, index) => {
+        // Contenu
+        const projectCardContent = document.createElement('div')
+        projectCardContent.className = 'project-card-content'
+        projectCard.appendChild(projectCardContent)
+
+        // Container img
+        const projectCardImgContainer = document.createElement('div')
+        projectCardImgContainer.className = 'project-card-img-container'
+
+        // img
+        const projectCardImage = document.createElement('img')
+        projectCardImage.className = 'project-card-img'
+        projectCardImage.src = sortedProjects[index].image
+        projectCardImage.alt = `Logo de ${sortedProjects[index].title}`
+        projectCardImgContainer.appendChild(projectCardImage)
+
+        // Container body
+        const projectCardBody = document.createElement('div')
+        projectCardBody.className = 'project-card-body'
+
+        // Container details
+        const projectCardDetails = document.createElement('div')
+        projectCardDetails.className = 'project-card-details'
+
+        // p categorie
+        const projectCardCategory = document.createElement('p')
+        projectCardCategory.className = 'project-card-domain'
+        projectCardCategory.textContent = sortedProjects[index].category
+
+        // p date
+        const projectCardYear = document.createElement('p')
+        projectCardYear.className = 'project-card-date'
+        projectCardYear.textContent = sortedProjects[index].year
+
+        // ajout contenu => detail
+        projectCardDetails.append(projectCardCategory, projectCardYear)
+
+        // title
+        const projectCardTitle = document.createElement('h2')
+        projectCardTitle.className = 'project-card-title'
+        projectCardTitle.innerHTML = sortedProjects[index].title
+
+        // subtitle
+        const projectCardSubtitle = document.createElement('h3')
+        if (sortedProjects[index].subtitle) {
+            projectCardSubtitle.className = 'project-card-subtitle'
+            projectCardSubtitle.innerHTML = sortedProjects[index].subtitle
+        }
+        // description
+        const projectCardDescription = document.createElement('p')
+        projectCardDescription.className = 'project-card-description'
+        projectCardDescription.innerHTML = sortedProjects[index].description
+
+        // url
+        const projectCardUrl = document.createElement('a')
+        if (sortedProjects[index].url) {
+            projectCardUrl.className = 'project-card-link'
+            projectCardUrl.href = sortedProjects[index].url
+            projectCardUrl.target = '_blank'
+            projectCardUrl.textContent = 'Voir le projet'
+        }
+
+        // ajout contenu => body
+        if (sortedProjects[index].url && sortedProjects[index].subtitle) {
+            projectCardBody.append(
+                projectCardDetails,
+                projectCardTitle,
+                projectCardSubtitle,
+                projectCardDescription,
+                projectCardUrl
+            )
+        } else if (
+            !sortedProjects[index].url &&
+            !sortedProjects[index].subtitle
+        ) {
+            projectCardBody.append(
+                projectCardDetails,
+                projectCardTitle,
+                projectCardDescription
+            )
+        } else if (!sortedProjects[index].url) {
+            projectCardBody.append(
+                projectCardDetails,
+                projectCardTitle,
+                projectCardSubtitle,
+                projectCardDescription
+            )
+        } else if (!sortedProjects[index].subtitle) {
+            projectCardBody.append(
+                projectCardDetails,
+                projectCardTitle,
+                projectCardDescription,
+                projectCardUrl
+            )
+        }
+
+        // ajout contenu => Contenu
+        projectCardContent.append(projectCardImgContainer, projectCardBody)
+    })
+}
