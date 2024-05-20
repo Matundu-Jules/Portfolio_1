@@ -27,7 +27,7 @@ export function init() {
     updateScrollBehavior()
 
     // Affichage des projets
-    const projectGallery = document.querySelectorAll('.project-card')
+    const projectGallery = document.querySelectorAll('.project-home-card')
 
     projectGallery.forEach((projectCard) => {
         if (projectCard.childElementCount === 0) {
