@@ -1,4 +1,5 @@
 @import "/styles/utils/variables.scss";
+@import "/styles/utils/_media_queries.scss";
 
 #contact-main {
   display: flex;
@@ -70,4 +71,31 @@
 .fa-brands {
   margin-right: 1rem;
   font-size: 3.5rem;
+}
+
+// MEDIA QUERIES
+// max-width: 767px
+@include sm {
+  #contact-main {
+    section {
+      height: auto;
+      h1 {
+        margin-bottom: 4rem;
+      }
+      .contact-details {
+        height: auto;
+        flex-direction: column;
+        flex-wrap: nowrap;
+
+        .details-container {
+          width: 23rem;
+          margin: 0;
+        }
+
+        .socials-container {
+          width: 23rem;
+        }
+      }
+    }
+  }
 }

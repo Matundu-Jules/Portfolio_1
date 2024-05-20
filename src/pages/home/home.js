@@ -19,6 +19,7 @@ window.addEventListener('load', updateScrollBehavior)
 displayHomeProjects(projects)
 
 export function init() {
+    console.log('Initialisation de la page home')
     // Gestion du menu sur le responsive
     responsiveMenu()
 

@@ -12,9 +12,15 @@
   }
 }
 
+@mixin sm-md {
+  @media (min-width: 768px) and (max-width: 984px) {
+    @content;
+  }
+}
+
 /* Portrait tablet to landscape and desktop */
 @mixin md {
-  @media (min-width: 768px) and (max-width: 1199px) {
+  @media (min-width: 985px) and (max-width: 1199px) {
     @content;
   }
 }

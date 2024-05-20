@@ -39,26 +39,8 @@ export const pageTransition = () => {
 
                     switch (currentNamespace) {
                         case 'home':
-                            setActiveLink(
-                                currentNamespace,
-                                oldNamespace,
-                                oldURL
-                            )
-                            break
                         case 'about':
-                            setActiveLink(
-                                currentNamespace,
-                                oldNamespace,
-                                oldURL
-                            )
-                            break
                         case 'contact':
-                            setActiveLink(
-                                currentNamespace,
-                                oldNamespace,
-                                oldURL
-                            )
-                            break
                         case 'projects':
                             setActiveLink(
                                 currentNamespace,
@@ -80,7 +62,6 @@ export const pageTransition = () => {
                     )
                 },
             },
-            // Ajout d'une 2eme transition pour charger le loader sur la page d'accueil (beforeEnter ou enter ? à tester)
         ],
     })
 }
