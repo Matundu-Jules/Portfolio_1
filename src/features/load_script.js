@@ -6,7 +6,6 @@ export function loadScript(name) {
     )
     existingScripts.forEach((script) => {
         if (!script.src.includes('index.js')) {
-            // console.log(`Suppression du script existant : ${script.src}`)
             script.parentNode.removeChild(script)
         }
     })
@@ -14,18 +13,11 @@ export function loadScript(name) {
     // Importation dynamique du script basé sur le namespace
     import(`../pages/${name}/${name}.js`)
         .then((module) => {
-            // console.log(
-            //     `Le module pour la page ${name} a été importé avec succès.`
-            // )
             if (typeof module.init === 'function') {
                 module.init()
                 console.log(
                     `Le script de la page de ${name} a été chargé avec succès.`
                 )
-            } else {
-                // console.error(
-                //     `Erreur : la fonction 'init' n'est pas définie dans le module pour la page ${name}.`
-                // )
             }
         })
         .catch((err) => {

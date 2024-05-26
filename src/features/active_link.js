@@ -18,5 +18,3 @@ export function setActiveLink(currentNamespace, oldNamespace, oldURL) {
         oldLink.classList.remove('active')
     }
 }
-
-// export function setActiveLinkSubPage(currentNamespace, oldNamespace, oldURL) {}

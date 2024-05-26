@@ -2,7 +2,6 @@
 @import "/styles/utils/_media_queries.scss";
 
 main {
-  // margin-top: 0;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -33,7 +32,6 @@ main {
 
   display: flex;
   flex-direction: column;
-  // padding: 10% 0;
 
   h1 {
     height: 20%;
@@ -96,7 +94,6 @@ main {
   align-items: center;
   width: 100%;
   margin: 0 0;
-  // height: 100%;
 
   h2 {
     margin: 0 0 5rem;
@@ -202,7 +199,6 @@ main {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  // flex-wrap: wrap;
 
   .home-btn {
     margin-top: 2rem;
@@ -428,7 +424,6 @@ main {
       justify-content: center;
       align-items: center;
       flex-wrap: wrap;
-      // padding-bottom: 0;
       margin: 0;
     }
 
