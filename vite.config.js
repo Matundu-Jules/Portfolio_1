@@ -14,8 +14,24 @@ export default defineConfig({
         viteStaticCopy({
             targets: [
                 {
-                    src: 'assets/images/**/*',
+                    src: 'assets/images/*',
                     dest: 'assets/images',
+                },
+                {
+                    src: 'assets/images/banner/**/*',
+                    dest: 'assets/images/banner',
+                },
+                {
+                    src: 'assets/images/exp-thumbnail/**/*',
+                    dest: 'assets/images/exp-thumbnail',
+                },
+                {
+                    src: 'assets/images/projects/**/*',
+                    dest: 'assets/images/projects',
+                },
+                {
+                    src: 'assets/documents/**/*', // Les documents sources
+                    dest: 'assets/documents', // Le répertoire de destination dans 'dist'
                 },
             ],
         }),
