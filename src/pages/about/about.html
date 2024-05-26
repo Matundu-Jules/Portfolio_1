@@ -33,7 +33,7 @@
         <i class="fa-solid fa-bars"></i>
       </button>
 
-      <nav role="navigation">
+      <nav role="navigation" class="header-menu">
         <a id="home-nav-link" href="/index.html">Accueil</a>
         <!-- <div class="dropdown"> -->
         <a
@@ -85,75 +85,163 @@
     <main data-barba="container" data-barba-namespace="about">
       <h1>À propos de moi</h1>
       <section id="about-intro">
+        <div class="about-intro-img-container">
+          <img
+            src="/assets/images/img_profil.jpg"
+            alt="Photo de profil"
+            class="about-intro-img"
+          />
+        </div>
         <p>
-          👋 Bonjour ! Je suis Jules-Langa Matundu, basé en région
-          Île-de-France.<br />
-          Passionné par le domaine de l'informatique, je me spécialise
-          actuellement en administration de systèmes, réseaux et sécurité.<br /><br />
-          Formé en systèmes numériques, développement web et intervention
-          télécoms, mon parcours intègre une expertise en fibre optique, réseaux
-          mobiles, IoT, et installations de LAN, reflétant une fusion de
-          compétences techniques et de créativité. <br /><br />
-          Actuellement en recherche d'alternance, je suis déterminé à mettre mon
-          expertise au service d'un environnement innovant. Ma passion pour la
-          danse Hip-Hop enrichit mon approche professionnelle, m'apportant
-          dynamisme et une perspective créative dans la résolution de problèmes
-          techniques. <br /><br />
-          Prêt à relever de nouveaux défis, je suis motivé à contribuer
-          activement au succès d'une équipe dynamique, où je pourrai continuer à
-          développer mes compétences et partager mes connaissances en réseaux et
-          développement web. <br />
+          Bonjour !<br />
+          Je suis Jules-Langa Matundu, basé en région Île-de-France.<br /><br />
+          Passionné par le domaine de l'informatique, je recherche une
+          alternance pour me spécialiser en administration de systèmes, réseaux
+          et sécurité.<br /><br />
+          Mon parcours en systèmes numériques, développement web et intervention
+          télécoms m'a apporté une certaine expertise dans le domaine de
+          l'informatique.<br />
+          Passionné de danse Hip-Hop, j'apporte dynamisme et créativité dans la
+          résolution de problèmes techniques. <br /><br />
+          Motivé et prêt à relever de nouveaux défis, je suis déterminé à
+          contribuer activement au succès d'une équipe innovante.
         </p>
       </section>
 
-      <!-- Ajout du CV -->
-
-      <h2>Mes diplômes</h2>
-      <section>
+      <section class="degrees-container">
+        <h2>Mes Formations</h2>
         <ul>
           <li>
-            Bac Professionnel Systèmes Électroniques Numériques option
-            Télecommunications et Réseaux
+            2012-2014 : Bac Professionnel Systèmes Électroniques Numériques
+            option Télecommunications et Réseaux
           </li>
+          <li>2014-2016 : BTS Systèmes Numériques</li>
           <li>
-            BAFA + Certification d'animateur club enfant en village vacances
-            (École The Village)
+            2015 : BAFA + Certification d'animateur club enfant en village
+            vacances (École The Village)
           </li>
-          <li>Développeur Web (OpenClassrooms - Niveau 5 | Bac +2)</li>
+          <li>2022 : Développeur Web (OpenClassrooms - Niveau 5 | Bac +2)</li>
           <li>
-            Technicien d'intervention télécoms (Campus Numériques de Montereau -
-            Niveau 4 | Bac)
+            2023 : Technicien d'intervention télécoms (Campus Numériques de
+            Montereau - Niveau 4 | Bac)
+          </li>
+        </ul>
+      </section>
+      <section class="experiences-container">
+        <h2>Mes expériences</h2>
+        <ul class="experiences-list">
+          <li class="experiences-card">
+            <div class="exp-img-container exp-anim">
+              <img
+                src="/assets/images/exp-thumbnail/entertainer.jpg"
+                alt="Photo de mon expérience d'animateur en centre de loisirs et village vacances"
+                class="exp-card-img"
+              />
+            </div>
+            <div class="exp-card-content">
+              <p>Animateur en centre de loisirs et village vacances</p>
+              <p>2016-2022</p>
+            </div>
+          </li>
+          <li class="experiences-card">
+            <div class="exp-img-container exp-hiphop">
+              <img
+                src="/assets/images/exp-thumbnail/dance.jpg"
+                alt="Photo de mon expérience d'instructeur de danse hip-hop"
+                class="exp-card-img"
+              />
+            </div>
+            <div class="exp-card-content">
+              <p>Instructeur de danse hip-hop</p>
+              <p>2016-2019</p>
+            </div>
+          </li>
+          <li class="experiences-card">
+            <div class="exp-img-container exp-agent">
+              <img
+                src="/assets/images/exp-thumbnail/recensement.webp"
+                alt="Photo de mon expérience d'agent recenseur"
+                class="exp-card-img"
+              />
+            </div>
+            <div class="exp-card-content">
+              <p>Agent recenseur</p>
+              <p>2020</p>
+            </div>
+          </li>
+          <li class="experiences-card">
+            <div class="exp-img-container exp-dev">
+              <img
+                src="/assets/images/exp-thumbnail/webdev.jpg"
+                alt="Photo de mon expérience de développeur Web"
+                class="exp-card-img"
+              />
+            </div>
+            <div class="exp-card-content">
+              <p>Développeur Web</p>
+              <p>2022</p>
+            </div>
+          </li>
+          <li class="experiences-card">
+            <div class="exp-img-container exp-fiber">
+              <img
+                src="/assets/images/exp-thumbnail/fiber.jpg"
+                alt="Photo de mon expérience de techncien Fibre Optique (D3)"
+                class="exp-card-img"
+              />
+            </div>
+            <div class="exp-card-content">
+              <p>Technicien Fibre Optique (D3)</p>
+              <p>2023-2024</p>
+            </div>
           </li>
         </ul>
       </section>
 
-      <h2>Mes expériences</h2>
-      <div class="container">
-        <a
-          class="triangle triangle1"
-          href="/pages/entertainer/entertainer.html"
-          title="En savoir plus sur mon expérience d'animateur"
-          ><p>Animateur</p></a
-        >
-        <a
-          class="triangle triangle2"
-          href="/pages/hiphop/hiphop.html"
-          title="En savoir plus sur mon expérience de danseur hip-hop"
-          ><p>Danse HipHop</p></a
-        >
-        <a
-          class="triangle triangle3"
-          href="/pages/webdev/webdev.html"
-          title="En savoir plus sur mon expérience de développeur web"
-          ><p>Développeur Web</p></a
-        >
-        <a
-          class="triangle triangle4"
-          href="/pages/fiber/fiber.html"
-          title="En savoir plus sur mon expérience de technicien fibre optique"
-          ><p>Technicien fibre optique</p></a
-        >
-      </div>
+      <section id="about-skills">
+        <h2>Compétences Techniques</h2>
+        <div class="about-skills-container">
+          <div class="about-skill-category">
+            <h3>Développement Web</h3>
+            <ul>
+              <li><p>HTML, CSS, SASS</p></li>
+              <li><p>JavaScript, Node.js, React</p></li>
+              <li><p>Mongo DB, PostgreSQL</p></li>
+              <li><p>SEO, Optimisation, Accessibilité web</p></li>
+              <li><p>No-code, Wordpress</p></li>
+              <li><p>Règlementations (CNIL, RGPD, WCAG)</p></li>
+            </ul>
+          </div>
+          <div class="about-skill-category">
+            <h3>Réseaux Informatiques et Sécurité</h3>
+            <ul>
+              <li><p>Linux, Ubuntu, Windows</p></li>
+              <li><p>Adressage IP, Routage, Cisco Packet Tracer</p></li>
+              <li><p>Virtualisation</p></li>
+              <li><p>IoT, Home Assistant</p></li>
+              <li><p>Installation de caméras de vidéo-surveillance</p></li>
+              <li><p>Protocoles de communications sans fil</p></li>
+            </ul>
+          </div>
+          <div class="about-skill-category">
+            <h3>Télécommunications - Fibre optique</h3>
+            <ul>
+              <li><p>Raccordement aérien, souterrain, aero-souterrain</p></li>
+              <li><p>SAV, PLP</p></li>
+              <li><p>Règlementations (ARCEP, ARCOM)</p></li>
+              <li><p>Diagnostics et réflectométrie</p></li>
+              <li><p>CACES R486 Nacelle, Habilitation électrique</p></li>
+              <li><p>AIPR, Habilitation travaux en hauteur</p></li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- Ajout du CV -->
+      <section class="cv-container">
+        <h2>Mon CV</h2>
+        <a href="" class="cv-link">Télécharger mon CV</a>
+      </section>
     </main>
 
     <footer>

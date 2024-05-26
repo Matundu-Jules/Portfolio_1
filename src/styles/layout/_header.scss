@@ -91,6 +91,8 @@ header {
       position: absolute;
       top: 8rem;
       width: 100%;
+      height: auto;
+      padding-bottom: 1rem;
       background: $bg1;
       opacity: 1;
       z-index: 5;
@@ -118,6 +120,14 @@ header {
 
     nav {
       position: static;
+    }
+  }
+}
+
+@include xs {
+  header {
+    .hamburger {
+      margin-right: 0;
     }
   }
 }
