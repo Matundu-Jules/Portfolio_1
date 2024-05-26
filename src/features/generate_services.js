@@ -26,10 +26,10 @@ let allServices = [
 
 let srcBannerImg = [
     '/assets/images/banner/webdesign.jpg',
-    '/assets/images/banner/iot1.jpg',
+    '/assets/images/banner/iot.jpg',
     '/assets/images/banner/it-support.jpg',
     '/assets/images/banner/lan.jpg',
-    '/assets/images/banner/fiber41.jpg',
+    '/assets/images/banner/fiber.jpg',
 ]
 
 let index = 0
