@@ -164,9 +164,9 @@ main {
     box-shadow: $box-shadow;
 
     h3 {
-      height: 3rem;
+      min-height: 3rem;
       text-align: center;
-      padding-bottom: 1.5rem;
+      padding: 0 1rem 1.5rem;
       margin-bottom: 0;
       border-bottom: 1px solid $bg-card-border;
     }
@@ -354,6 +354,12 @@ main {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+  }
+
+  .contact-text {
+    margin-top: 2rem;
+    justify-content: center;
+    text-align: center;
   }
 }
 
@@ -552,6 +558,10 @@ main {
 
     .socials-container {
       width: 23rem;
+    }
+
+    .contact-text {
+      margin-top: 6rem;
     }
   }
 }

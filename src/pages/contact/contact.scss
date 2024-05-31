@@ -33,6 +33,12 @@
       width: 100%;
       margin: 1rem 0;
     }
+
+    .contact-text {
+      margin-top: 2rem;
+      justify-content: center;
+      text-align: center;
+    }
   }
 }
 
@@ -95,6 +101,10 @@
         .socials-container {
           width: 23rem;
         }
+      }
+
+      .contact-text {
+        margin-top: 6rem;
       }
     }
   }
