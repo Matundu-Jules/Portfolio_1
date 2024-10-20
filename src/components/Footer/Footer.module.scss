@@ -1,0 +1,26 @@
+footer {
+  width: 100%;
+  height: var(--footer-size);
+  border-top: 1px solid var(--text-color);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+  p {
+    margin-top: 0;
+    margin-bottom: 2rem;
+    text-align: center;
+  }
+}
+
+.footer-social {
+  i {
+    font-size: 3rem;
+  }
+
+  .github {
+    margin-right: 2rem;
+  }
+}

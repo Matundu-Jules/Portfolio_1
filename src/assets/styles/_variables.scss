@@ -1,0 +1,49 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+
+:root {
+  --primary: #134611;
+  --primary-light: #abe188;
+  --secondary: #3aafb9;
+
+  --bg1: #000c15;
+  --bg2: #001a2b;
+
+  --font-family: Roboto, Helvetica, Arial, sans-serif;
+  --text-color: #f2f5ea;
+  --link-color: #9dd1f1;
+
+  //  --box-shadow: 0 6px 9px 0 rgb(0 0 0 / 15%);
+  --box-shadow: 0px 0px 4px 0px rgba(242, 245, 234, 0.1);
+  --box-shadow-nav: rgb(0 0 0 / 22%) 0px 2px 18px 0px;
+
+  --bg-card: rgba(242, 245, 234, 0.03);
+  --bg-card-border: rgba(242, 245, 234, 0.15);
+
+  --header-size: 8rem;
+  --footer-size: 12rem;
+}
+
+// Mixin
+@mixin bg-gradient() {
+  background: rgb(0, 26, 43);
+  background: -moz-radial-gradient(
+    circle,
+    rgba(0, 26, 43, 1) 0%,
+    rgba(0, 12, 21, 1) 80%
+  );
+  background: -webkit-radial-gradient(
+    circle,
+    rgba(0, 26, 43, 1) 0%,
+    rgba(0, 12, 21, 1) 80%
+  );
+  background: radial-gradient(
+    circle,
+    rgba(0, 26, 43, 1) 0%,
+    rgba(0, 12, 21, 1) 80%
+  );
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#001a2b",endColorstr="#000c15",GradientType=1);
+}
+
+body {
+  @include bg-gradient();
+}

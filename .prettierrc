@@ -1,0 +1,51 @@
+{
+  "overrides": [
+    {
+      "files": "*.js",
+      "options": {
+        "trailingComma": "es5",
+        "tabWidth": 4,
+        "semi": false,
+        "singleQuote": true,
+        "printWidth": 80
+      }
+    },
+    {
+      "files": "*.jsx",
+      "options": {
+        "trailingComma": "es5",
+        "tabWidth": 4,
+        "semi": false,
+        "singleQuote": true,
+        "printWidth": 80
+      }
+    },
+    {
+      "files": "*.html",
+      "options": {
+        "printWidth": 140
+      }
+    },
+    {
+      "files": "*.scss",
+      "options": {
+        "tabWidth": 2,
+        "singleQuote": false,
+        "trailingComma": "none",
+        "printWidth": 80
+      }
+    },
+    {
+      "files": "*.prettierrc",
+      "options": {
+        "parser": "json"
+      }
+    },
+    {
+      "files": "*",
+      "options": {
+        "printWidth": 80
+      }
+    }
+  ]
+}

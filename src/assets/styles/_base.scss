@@ -1,0 +1,50 @@
+:root {
+  font-family: var(--font-family);
+  line-height: 1.5;
+  font-weight: 400;
+  font-size: 62.5%;
+  box-sizing: border-box;
+
+  // color-scheme: light dark;
+  color: var(--text-color);
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  margin: 0;
+  font-size: 1.6rem;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  margin: 0;
+}
+
+ul {
+  list-style: none;
+  padding-left: 0px;
+  margin: 0;
+}
+
+img {
+  max-width: 100%;
+}
+
+a {
+  color: var(--text-color);
+  text-decoration: none;
+  transition: all 0.15s ease-in-out;
+
+  &:hover {
+    color: var(--link-color);
+    text-decoration: underline;
+    transform: scale(1.03);
+  }
+}
