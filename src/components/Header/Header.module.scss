@@ -42,3 +42,14 @@
     margin-right: 1rem;
   }
 }
+
+.header nav a {
+  text-decoration: none;
+  color: #eee;
+}
+
+.header nav a.active {
+  font-weight: bold;
+  color: #007bff; /* Couleur différente pour l’élément actif */
+  border-bottom: 2px solid #007bff; /* Ligne pour indiquer le lien actif */
+}

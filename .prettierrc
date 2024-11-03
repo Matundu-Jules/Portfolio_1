@@ -1,17 +1,7 @@
 {
   "overrides": [
     {
-      "files": "*.js",
-      "options": {
-        "trailingComma": "es5",
-        "tabWidth": 4,
-        "semi": false,
-        "singleQuote": true,
-        "printWidth": 80
-      }
-    },
-    {
-      "files": "*.jsx",
+      "files": ["*.js", "*.jsx"],
       "options": {
         "trailingComma": "es5",
         "tabWidth": 4,
@@ -45,6 +35,12 @@
       "files": "*",
       "options": {
         "printWidth": 80
+      }
+    },
+    {
+      "files": "*.json",
+      "options": {
+        "parser": "json"
       }
     }
   ]

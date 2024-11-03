@@ -1,8 +1,8 @@
 import { Element, scroller } from 'react-scroll'
-import { useCallback, useEffect, useRef, useState } from 'react'
+import { useCallback, useEffect, useRef, useState, useMemo } from 'react'
 import { format } from 'date-fns'
-import { fr, is } from 'date-fns/locale'
-import styles from './Content.module.scss'
+import { fr } from 'date-fns/locale'
+import styles from './Home.module.scss'
 import webdevImg from '../../assets/images/banner/webdesign.jpg'
 import profilImg from '../../assets/images/img_profil.jpg'
 import projects from '../../assets/scripts/all-projects.js'
@@ -11,10 +11,13 @@ const recentProjects = projects
     .sort((a, b) => new Date(b.date) - new Date(a.date)) // Trie par date complète
     .slice(0, 2)
 
-function Content() {
+function Home() {
     const [currentSection, setCurrentSection] = useState(0)
     const [isDesktop, setIsDesktop] = useState(true)
-    const sectionNames = ['about', 'skills', 'projects', 'contact']
+    const sectionNames = useMemo(
+        () => ['about', 'skills', 'projects', 'contact'],
+        []
+    )
     const isTrottled = useRef(false)
     const headerHeight = 101
 
@@ -111,7 +114,7 @@ function Content() {
                                 </div>
                                 <div className={styles['about-txt-container']}>
                                     <p>
-                                        Bonjour, je m'appelle Jules-Langa
+                                        Bonjour, je m&rsquo;appelle Jules-Langa
                                         Matundu,
                                         <br />
                                         <br />
@@ -119,7 +122,7 @@ function Content() {
                                         Numérique de Montereau, je combine les
                                         rôles de formateur en réseaux LAN,
                                         vidéosurveillance et IoT, et de
-                                        développeur d'une plateforme de
+                                        développeur d&rsquo;une plateforme de
                                         e-learning. Je poursuis également mes
                                         études en informatique à SUPINFO Paris,
                                         avec une solide expérience en
@@ -133,9 +136,9 @@ function Content() {
                                         formation et solutions informatiques.
                                         Mon parcours diversifié dans les
                                         systèmes, réseaux et développement web
-                                        reflète mon désir d'innover et de créer
-                                        des solutions techniques créatives et
-                                        efficaces. <br />
+                                        reflète mon désir d&rsquo;innover et de
+                                        créer des solutions techniques créatives
+                                        et efficaces. <br />
                                         Prêt à relever de nouveaux défis, je
                                         mets mon expertise et mes compétences au
                                         service de projets innovants et
@@ -239,7 +242,7 @@ function Content() {
                         href="/pages/about/about.html"
                         className={styles['home-btn']}
                     >
-                        Plus d'information sur mon parcours
+                        Plus d&rsquo;information sur mon parcours
                     </a>
                 </section>
             </Element>
@@ -249,7 +252,7 @@ function Content() {
                     <h2>Mes Projets</h2>
 
                     <div className={styles['project-home-gallery']}>
-                        {recentProjects.map((project, index) => (
+                        {recentProjects.map((project) => (
                             // console.log(project)
                             <div
                                 key={project.title}
@@ -368,8 +371,8 @@ function Content() {
                         </div>
                     </div>
                     <p className={styles['contact-text']}>
-                        Veuillez me contacter par email afin de convenir d'un
-                        rendez-vous téléphonique.
+                        Veuillez me contacter par email afin de convenir
+                        d&rsquo;un rendez-vous téléphonique.
                     </p>
                 </section>
             </Element>
@@ -377,4 +380,4 @@ function Content() {
     )
 }
 
-export default Content
+export default Home
