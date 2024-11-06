@@ -6,7 +6,7 @@ export default [
         date: '2024-10-20',
         description:
             "Développement d'une API complète pour la gestion des trajets ferroviaires, incluant la création, modification, suppression de trains et gares, avec authentification JWT, validation des données et documentation Swagger.",
-        url: '',
+        url: 'https://github.com/Matundu-Jules/railroad-api.git',
     },
     {
         title: 'Application & Site Web <br />CLEM',
