@@ -1,0 +1,33 @@
+// Variables pour les breakpoints
+:root {
+    --breakpoint-xs: 480px;  // Téléphones
+    --breakpoint-sm: 768px;  // Tablettes
+    --breakpoint-md: 1024px; // Petits écrans desktop
+    --breakpoint-lg: 1200px; // Grands écrans desktop
+    --breakpoint-xl: 1440px; // Très grands écrans
+}
+
+// Mixin pour les media queries
+@mixin mediaquery($breakpoint) {
+    @if $breakpoint == xs {
+        @media (min-width: var(--breakpoint-xs)) {
+            @content;
+        }
+    } @else if $breakpoint == sm {
+        @media (min-width: var(--breakpoint-sm)) {
+            @content;
+        }
+    } @else if $breakpoint == md {
+        @media (min-width: var(--breakpoint-md)) {
+            @content;
+        }
+    } @else if $breakpoint == lg {
+        @media (min-width: var(--breakpoint-lg)) {
+            @content;
+        }
+    } @else if $breakpoint == xl {
+        @media (min-width: var(--breakpoint-xl)) {
+            @content;
+        }
+    }
+}
