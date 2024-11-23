@@ -1,7 +1,9 @@
+@use "../../assets/styles/breakpoints" as *;
+
 .header {
-  padding: 10px 20px;
-  width: 100%;
+  width: 100vw;
   height: var(--header-size);
+  padding: 2rem;
   background-color: var(--bg1);
   border-bottom: 1px solid var(--text-color);
   color: var(--text-color);
@@ -9,47 +11,83 @@
 
   display: flex;
   flex-direction: row;
+  justify-content: space-between;
   align-items: center;
-  justify-content: center;
   position: fixed;
 
-  nav {
-    position: absolute;
+  .logo-container {
     height: 100%;
 
     display: flex;
-    flex-direction: row;
-    justify-content: center;
     align-items: center;
+    justify-content: center;
+
+    img {
+      width: 6rem;
+    }
+  }
+
+  .hamburger {
+    position: relative;
+    color: var(--text-color);
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 2.5rem;
+  }
+
+  .header-menu {
+    display: none;
 
     a {
-      margin: 0 2rem 0 2rem;
+      text-decoration: none;
+
+      &.active {
+        color: var(--link-color);
+        font-weight: bold;
+      }
+    }
+
+    &.open {
+      top: 100%;
+      width: 100%;
+      right: 0;
+      text-align: center;
+      background: var(--bg1);
+      border-bottom: 1px solid var(--text-color);
+      border-top: 1px solid var(--text-color);
+      padding: 1rem;
+      z-index: 1000;
+
+      display: flex;
+      flex-direction: column;
+      position: absolute;
     }
   }
 }
 
-.logo-container {
-  height: 100%;
-  left: 3rem;
+@include mediaquery(md) {
+  .header {
+    justify-content: center;
 
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  position: absolute;
+    .logo-container {
+      left: 3rem;
 
-  img {
-    width: 7rem;
-    margin-right: 1rem;
+      position: absolute;
+    }
+    .hamburger {
+      display: none;
+    }
+
+    .header-menu {
+      position: absolute;
+      height: 100%;
+      gap: 1.5rem;
+
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+    }
   }
-}
-
-.header nav a {
-  text-decoration: none;
-  color: #eee;
-}
-
-.header nav a.active {
-  font-weight: bold;
-  color: var(--link-color); /* Couleur différente pour l’élément actif */
-  border-bottom: 2px solid var(--link-color); /* Ligne pour indiquer le lien actif */
 }

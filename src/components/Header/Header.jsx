@@ -1,10 +1,42 @@
+import { useState, useEffect } from 'react'
 import styles from './Header.module.scss'
 import logo from '../../assets/images/header-logo.png'
 import { NavLink } from 'react-router-dom'
 
 function Header() {
+    const [isMenuOpen, setMenuOpen] = useState(false)
+
+    // Gestion de l'ouverture/fermeture du menu
+    const toggleMenu = () => {
+        setMenuOpen((prevState) => !prevState)
+    }
+
+    // Fermeture du menu en cliquant ailleurs
+    useEffect(() => {
+        const handleClickOutside = (event) => {
+            const menu = document.querySelector(`.${styles['header-menu']}`)
+            const hamburger = document.querySelector(`.${styles.hamburger}`)
+
+            if (
+                isMenuOpen &&
+                menu &&
+                !menu.contains(event.target) &&
+                !hamburger.contains(event.target)
+            ) {
+                setMenuOpen(false)
+            }
+        }
+
+        document.addEventListener('click', handleClickOutside)
+
+        return () => {
+            document.removeEventListener('click', handleClickOutside)
+        }
+    }, [isMenuOpen])
+
     return (
         <header className={styles.header}>
+            {/* Logo */}
             <NavLink
                 to="/"
                 className={styles['logo-container']}
@@ -14,67 +46,67 @@ function Header() {
                 Matundu Jules
             </NavLink>
 
-            {/* <button className="hamburger" aria-label="Menu">
+            {/* Bouton hamburger */}
+            <button
+                className={`${styles.hamburger} ${
+                    isMenuOpen ? styles.open : ''
+                }`}
+                aria-label="Menu"
+                onClick={toggleMenu}
+            >
                 <i className="fa-solid fa-bars"></i>
-            </button> */}
+            </button>
 
-            <nav>
+            {/* Navigation */}
+            <nav
+                className={`${styles['header-menu']} ${
+                    isMenuOpen ? styles.open : ''
+                }`}
+            >
                 <NavLink
                     to="/"
-                    id="home-nav-link"
                     className={({ isActive }) =>
-                        isActive ? styles.active : ''
+                        `${styles.navLink} ${isActive ? styles.active : ''}`
                     }
+                    onClick={() => setMenuOpen(false)}
                     end
                 >
                     Accueil
                 </NavLink>
                 <NavLink
                     to="/about"
-                    id="about-nav-link"
                     className={({ isActive }) =>
-                        isActive ? styles.active : ''
+                        `${styles.navLink} ${isActive ? styles.active : ''}`
                     }
+                    onClick={() => setMenuOpen(false)}
                 >
                     A propos
                 </NavLink>
                 <NavLink
                     to="/projects"
-                    id="projects-nav-link"
                     className={({ isActive }) =>
-                        isActive ? styles.active : ''
+                        `${styles.navLink} ${isActive ? styles.active : ''}`
                     }
+                    onClick={() => setMenuOpen(false)}
                 >
                     Mes projets
                 </NavLink>
-                <NavLink to="https://blog.julesmatundu.com/" id="blog-nav-link">
+                <NavLink
+                    to="https://blog.julesmatundu.com/"
+                    className={styles.navLink}
+                    onClick={() => setMenuOpen(false)}
+                >
                     Mon blog
                 </NavLink>
                 <NavLink
                     to="/contact"
-                    id="contact-nav-link"
                     className={({ isActive }) =>
-                        isActive ? styles.active : ''
+                        `${styles.navLink} ${isActive ? styles.active : ''}`
                     }
+                    onClick={() => setMenuOpen(false)}
                 >
                     Contact
                 </NavLink>
-
-                {/* <a id="home-nav-link" href="/index.html">
-                    Accueil
-                </a>
-                <a id="about-nav-link" href="/pages/about/about.html">
-                    A propos
-                </a>
-                <a id="projects-nav-link" href="/pages/projects/projects.html">
-                    Mes projets
-                </a>
-                <a id="blog-nav-link" href="https://blog.julesmatundu.com/">
-                    Mon Blog
-                </a>
-                <a id="contact-nav-link" href="/pages/contact/contact.html">
-                    Contact
-                </a> */}
             </nav>
         </header>
     )

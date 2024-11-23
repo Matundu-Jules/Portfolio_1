@@ -1,7 +1,7 @@
-@use "./variables";
-@use "./base";
-@use "./flex";
-@use "./utils";
-@use "./breakpoints";
-@use "./themes";
-@use "./debug";
+@use "./variables" as *;
+@use "./base" as *;
+@use "./flex" as *;
+@use "./utils" as *;
+@use "./breakpoints" as *;
+@use "./themes" as *;
+@use "./debug" as *;

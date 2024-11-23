@@ -1,4 +1,5 @@
 @use "./base";
+@use "./breakpoints" as *;
 
 .skill-card {
   width: 100%;
@@ -8,6 +9,19 @@
   border: 1px solid var(--bg-card-border);
   border-radius: 1rem;
   box-shadow: var(--box-shadow);
+
+  @include mediaquery(sm) {
+    width: 45%;
+    height: 33rem;
+  }
+
+  @include mediaquery(md) {
+    height: auto;
+  }
+
+  @include mediaquery(lg) {
+    width: 100%;
+  }
 
   h3 {
     text-align: center;
