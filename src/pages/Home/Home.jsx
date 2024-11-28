@@ -3,7 +3,6 @@ import { useCallback, useEffect, useRef, useState, useMemo } from 'react'
 import { format } from 'date-fns'
 import { fr } from 'date-fns/locale'
 import styles from './Home.module.scss'
-import webdevImg from '../../assets/images/banner/webdesign.jpg'
 import profilImg from '../../assets/images/img_profil.jpg'
 import projects from '../../assets/scripts/all-projects.js'
 
@@ -85,35 +84,49 @@ function Home() {
             {/* Section 1: About */}
             <Element name="about">
                 <section className={styles['presentation-container']}>
-                    <div className={styles['banner-container']}>
-                        <img
-                            src={webdevImg}
-                            alt="Image de création de sites web"
-                            className={`${styles['banner-img']} ${styles['banner-fade']}`}
-                        />
-                        <div className={styles['banner-text-block']}>
-                            <p
-                                className={`${styles['banner-title']} ${styles['banner-fade']}`}
-                            >
-                                Création de sites web
-                            </p>
-                        </div>
-                    </div>
                     <div className={styles['presentation-content']}>
                         <h1>Portfolio de Jules-Langa Matundu</h1>
 
                         <section id={styles.about}>
-                            <h2>À propos de moi</h2>
                             <div className={styles['about-container']}>
-                                <div className={styles['about-img-container']}>
-                                    <img
-                                        src={profilImg}
-                                        alt="Photo de Matundu Jules-Langa"
-                                        className={styles['about-img']}
-                                    />
+                                <div
+                                    className={
+                                        styles['about-img-container-main']
+                                    }
+                                >
+                                    <div
+                                        className={
+                                            styles['about-img-container']
+                                        }
+                                    >
+                                        <img
+                                            src={profilImg}
+                                            alt="Photo de Matundu Jules-Langa"
+                                            className={styles['about-img']}
+                                        />
+                                    </div>
                                 </div>
+
                                 <div className={styles['about-txt-container']}>
+                                    <h2>À propos de moi</h2>
                                     <p>
+                                        Bonjour, je m&rsquo;appelle Jules-Langa
+                                        Matundu, <br /> En alternance au Campus
+                                        Numérique de Montereau, je combine les
+                                        rôles de développeur et formateur en
+                                        réseaux LAN, vidéosurveillance et IoT,
+                                        tout en poursuivant mes études en
+                                        informatique à SUPINFO Paris.
+                                    </p>
+                                    <p>
+                                        J&rsquo;ai lancé mon auto-entreprise,
+                                        Digital Challenge, où je propose des
+                                        services en développement web, formation
+                                        et solutions informatiques, avec
+                                        l&rsquo;objectif de créer des solutions
+                                        techniques innovantes et efficaces.
+                                    </p>
+                                    {/* <p className={styles['about-txt-1']}>
                                         Bonjour, je m&rsquo;appelle Jules-Langa
                                         Matundu,
                                         <br />
@@ -128,8 +141,8 @@ function Home() {
                                         avec une solide expérience en
                                         développement web, notamment en
                                         JavaScript.
-                                        <br />
-                                        <br />
+                                    </p>
+                                    <p className={styles['about-txt-2']}>
                                         En parallèle, je suis en train de lancer
                                         mon auto-entreprise, où je proposerai
                                         des services en développement web,
@@ -143,7 +156,7 @@ function Home() {
                                         mets mon expertise et mes compétences au
                                         service de projets innovants et
                                         stimulants.
-                                    </p>
+                                    </p> */}
                                 </div>
                             </div>
                         </section>

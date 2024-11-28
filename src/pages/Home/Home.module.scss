@@ -6,62 +6,23 @@
   margin-top: var(--header-size);
 }
 
-.banner-container {
-  position: relative;
-  width: 100%;
-  height: 20rem;
-
-  .banner-img {
-    opacity: 0;
-    transition: opacity 1s cubic-bezier(0.55, 0.085, 0.68, 0.53);
-    width: 100%;
-    height: 20rem;
-    object-fit: cover;
-    object-position: 80% 40%;
-  }
-
-  .banner-text-block {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 80%;
-    height: 6rem;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-
-    .banner-title {
-      opacity: 0;
-      transition: opacity 1s cubic-bezier(0.55, 0.085, 0.68, 0.53);
-      text-shadow: #000 1px 0 10px;
-      font-size: 2rem;
-    }
-
-    .banner-fade {
-      opacity: 1;
-      transition: opacity 1s cubic-bezier(0.55, 0.085, 0.68, 0.53);
-    }
-  }
-
-  .banner-fade {
-    opacity: 0.3;
-    transition: opacity 1s cubic-bezier(0.55, 0.085, 0.68, 0.53);
-  }
-}
-
 .presentation-content {
   width: 100%;
-  height: calc(100% - 20rem);
-  padding: 6rem 2rem;
+  min-height: calc(100vh - var(--header-size));
+  padding: 0 2rem;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
 
   h1 {
     text-align: center;
+    margin: 2rem 0;
   }
 }
 
+/* ABOUT */
 #about {
   width: 100%;
   margin: 0 0;
@@ -72,7 +33,11 @@
   align-items: center;
 
   h2 {
-    margin: 4rem 0 5rem;
+    margin: 2rem 0;
+
+    @include mediaquery(lg) {
+      margin: 2rem 0;
+    }
   }
 
   .about-container {
@@ -87,20 +52,32 @@
       flex-direction: row;
     }
 
-    .about-img-container {
-      width: 30rem;
-      min-width: 20rem;
-
-      height: 30rem;
-      min-height: 20rem;
+    .about-img-container-main {
+      height: 20rem;
+      width: 20rem;
+      min-height: 10rem;
+      min-width: 10rem;
+      margin-top: 2rem;
 
       display: flex;
       justify-content: center;
       align-items: center;
 
       @include mediaquery(md) {
-        margin-right: 6rem;
+        margin-top: 0;
+        margin-right: 4rem;
       }
+    }
+
+    .about-img-container {
+      width: 30rem;
+      min-width: 20rem;
+
+      height: auto;
+
+      display: flex;
+      justify-content: center;
+      align-items: center;
 
       .about-img {
         border-radius: 50%;
@@ -114,16 +91,27 @@
       @include mediaquery(md) {
         width: 50%;
       }
+
+      @include mediaquery(lg) {
+        width: 40%;
+
+        .about-txt-1 {
+          width: 50%;
+        }
+
+        .about-txt-2 {
+          width: 50%;
+        }
+      }
     }
   }
 }
 
 /* SKILLS */
-
 #skills {
   width: 100%;
   scroll-snap-align: start;
-  margin: 0;
+  margin-top: 4rem;
   margin-bottom: 6rem;
 
   display: flex;
@@ -287,3 +275,4 @@
     text-align: center;
   }
 }
+
