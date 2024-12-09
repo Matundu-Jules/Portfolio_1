@@ -1,0 +1,45 @@
+@use "../../../assets/styles/breakpoints" as *;
+
+/* SKILLS */
+#skills {
+  width: 100%;
+  scroll-snap-align: start;
+  margin-top: 4rem;
+  margin-bottom: 6rem;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  @include mediaquery(md) {
+    padding-top: 8rem;
+    height: 100vh;
+  }
+
+  .home-btn {
+    margin-top: 2rem;
+  }
+
+  .skills-container {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(1, 90%);
+    place-content: center;
+    gap: 2rem;
+    margin: 4rem 0 2rem 0;
+
+    @include mediaquery(sm) {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+
+    @include mediaquery(lg) {
+      display: grid;
+      grid-template-columns: repeat(3, 30%);
+    }
+  }
+}
