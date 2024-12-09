@@ -16,11 +16,45 @@ footer {
 }
 
 .footer-social {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  gap: 2rem;
+
+  a {
+    width: 3rem;
+    height: 3rem;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+    &:hover {
+      text-decoration: none;
+    }
+  }
+
   i {
+    width: 100%;
+    height: 100%;
     font-size: 3rem;
   }
 
   .github {
     margin-right: 2rem;
+  }
+
+  .digital-challenge-logo {
+    background-image: url("../../assets/images/digital-challenge/digital_challenge-logo_noir.svg");
+    background-size: cover;
+    filter: invert(96%) sepia(5%) saturate(268%) hue-rotate(58deg)
+      brightness(96%) contrast(90%);
+
+    &:hover {
+      filter: invert(77%) sepia(17%) saturate(1856%) hue-rotate(174deg)
+        brightness(94%) contrast(88%);
+    }
   }
 }
