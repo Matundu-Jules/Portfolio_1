@@ -42,6 +42,19 @@ function ContactSection() {
                                 Matundu-Jules
                             </a>
                         </p>
+                        <p className={styles['contact-entreprise']}>
+                            <i
+                                className={
+                                    styles['logo-contact-digital-challenge']
+                                }
+                            ></i>
+                            <a
+                                href="https://digital-challenge.fr"
+                                className={styles['contact-social-links']}
+                            >
+                                Digital Challenge
+                            </a>
+                        </p>
                     </div>
                 </div>
                 <p className={styles['contact-text']}>
