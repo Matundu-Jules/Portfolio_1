@@ -1,6 +1,18 @@
 @use "./base";
 @use "./breakpoints" as *;
 
+.home-btn {
+  padding: 1rem 2rem;
+  border: 1px solid var(--link-color);
+  color: var(--link-color);
+  border-radius: 1rem;
+
+  &:hover {
+    background-color: var(--link-color);
+    color: var(--bg2);
+  }
+}
+
 .skill-card {
   width: 100%;
   min-height: auto;
@@ -12,7 +24,7 @@
 
   @include mediaquery(sm) {
     width: 45%;
-    height: 33rem;
+    height: auto;
   }
 
   @include mediaquery(md) {
@@ -29,6 +41,14 @@
     text-align: center;
     padding: 1rem 1rem;
     border-bottom: 1px solid var(--bg-card-border);
+
+    @include mediaquery(md) {
+      font-size: 2rem;
+    }
+
+    @include mediaquery(lg) {
+      font-size: 2.4rem;
+    }
   }
 
   ul {

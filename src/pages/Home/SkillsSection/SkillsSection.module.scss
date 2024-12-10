@@ -37,6 +37,10 @@
       flex-wrap: wrap;
     }
 
+    @include mediaquery(md) {
+      margin-bottom: 4rem;
+    }
+
     @include mediaquery(lg) {
       display: grid;
       grid-template-columns: repeat(3, 30%);

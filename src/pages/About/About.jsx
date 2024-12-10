@@ -1,4 +1,5 @@
 import styles from './About.module.scss'
+import skills from '../../assets/scripts/skills.js'
 
 function About() {
     return (
@@ -142,42 +143,7 @@ function About() {
             <section id={styles['about-skills']}>
                 <h2>Compétences Techniques</h2>
                 <div className={styles['about-skills-container']}>
-                    {[
-                        {
-                            category: 'Développement web & mobile',
-                            skills: [
-                                'HTML, CSS, SASS',
-                                'JavaScript, Node.js, React',
-                                'Mongo DB, PostgreSQL',
-                                'SEO, Optimisation, Accessibilité web',
-                                'No-code, Wordpress',
-                                'Règlementations (CNIL, RGPD, WCAG)',
-                            ],
-                        },
-                        {
-                            category: 'Réseaux informatiques',
-                            skills: [
-                                'Linux, Ubuntu, Windows',
-                                'Adressage IP, Routage, Cisco Packet Tracer',
-                                'Virtualisation',
-                                'IoT, Home Assistant',
-                                'Installation de caméras de vidéo-surveillance',
-                                'ERP (Odoo)',
-                            ],
-                        },
-                        {
-                            category: 'Management & Communication',
-                            skills: [
-                                'Méthodes Agiles (Scrum, Kanban)',
-                                'Gestion de projet',
-                                "Leadership d'équipe",
-                                'Pédagogie adaptée',
-                                'Travail en équipe',
-                                'Adaptabilité',
-                                'Anglais',
-                            ],
-                        },
-                    ].map((skillCategory, index) => (
+                    {skills.map((skillCategory, index) => (
                         <div
                             key={index}
                             className={styles['about-skill-category']}

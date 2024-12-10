@@ -109,10 +109,7 @@ function ProjectsSection() {
                     </div>
                 ))}
             </div>
-            <a
-                href="/pages/projects/projects.html"
-                className={styles['home-btn']}
-            >
+            <a href="/pages/projects/projects.html" className="home-btn">
                 Voir tout mes projets
             </a>
         </Element>
