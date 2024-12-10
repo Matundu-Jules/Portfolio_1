@@ -1,7 +1,7 @@
 @use "../../assets/styles/breakpoints" as *;
 
 .header {
-  width: 100vw;
+  width: 100%;
   height: var(--header-size);
   padding: 2rem;
   background-color: var(--bg1);
