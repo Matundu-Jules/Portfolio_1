@@ -109,7 +109,7 @@ function ProjectsSection() {
                     </div>
                 ))}
             </div>
-            <a href="/pages/projects/projects.html" className="home-btn">
+            <a href="/projects" className="home-btn">
                 Voir tout mes projets
             </a>
         </Element>

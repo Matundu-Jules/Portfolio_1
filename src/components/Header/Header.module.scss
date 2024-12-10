@@ -34,7 +34,10 @@
     background: none;
     border: none;
     cursor: pointer;
-    font-size: 2.5rem;
+
+    i {
+      font-size: 2.5rem;
+    }
   }
 
   .header-menu {

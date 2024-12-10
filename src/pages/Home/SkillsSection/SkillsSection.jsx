@@ -22,7 +22,7 @@ function SkillsSection() {
                         </div>
                     ))}
                 </div>
-                <a href="/pages/about/about.html" className="home-btn">
+                <a href="/about" className="home-btn">
                     Plus d&rsquo;information sur mon parcours
                 </a>
             </section>
