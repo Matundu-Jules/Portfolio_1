@@ -1,0 +1,49 @@
+@use "../../../assets/styles/breakpoints" as *;
+
+#about-intro {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  margin: 8rem 0;
+  width: 100%;
+
+  @include mediaquery("md") {
+    flex-direction: row;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+  }
+
+  p {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+
+    text-align: center;
+    padding: 0 2rem;
+    width: 100%;
+    height: 100%;
+
+    @include mediaquery("md") {
+      width: 60%;
+    }
+  }
+
+  .about-intro-img-container {
+    width: 25%;
+    max-width: 30rem;
+    min-width: 20rem;
+    margin-bottom: 2rem;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+
+    .about-intro-img {
+      border-radius: 50%;
+    }
+  }
+}

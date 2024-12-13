@@ -1,0 +1,45 @@
+// DEGREES
+.degrees-container {
+  width: 100%;
+  margin: 8rem 0;
+  text-align: center;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  h2 {
+    margin-bottom: 4rem;
+  }
+
+  ul {
+    width: 100%;
+
+    li {
+      text-align: center;
+      padding: 1rem 0;
+      width: 100%;
+
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      &:hover {
+        border-bottom: 1px solid var(--link-color);
+        border-top: 1px solid var(--link-color);
+      }
+
+      p {
+        width: 80%;
+        margin: 0;
+        text-align: center;
+      }
+
+      strong {
+        font-weight: 700;
+        color: var(--link-color);
+      }
+    }
+  }
+}
