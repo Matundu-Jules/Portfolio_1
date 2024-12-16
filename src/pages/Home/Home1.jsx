@@ -3,7 +3,7 @@ import { useCallback, useEffect, useRef, useState, useMemo } from 'react'
 import { format } from 'date-fns'
 import { fr } from 'date-fns/locale'
 import styles from './Home.module.scss'
-import profilImg from '../../assets/images/img_profil.jpg'
+import profilImg from '../../assets/images/img_profil.png'
 import projects from '../../assets/scripts/all-projects.js'
 
 const recentProjects = projects

@@ -1,14 +1,23 @@
 import { Element } from 'react-scroll'
 import styles from './AboutSection.module.scss'
-import profilImg from '../../../assets/images/img_profil.jpg'
+import profilImg from '../../../assets/images/img_profil.png'
+import bannerVideo from '../../../assets/videos/test.mp4'
 
 function AboutSection() {
     return (
         <Element name="about">
             <section className={styles['presentation-container']}>
                 <div className={styles['presentation-content']}>
-                    <h1>Portfolio de Jules-Langa Matundu</h1>
-
+                    <div className={styles['video-banner']}>
+                        <video id="video" autoPlay loop muted playsInline>
+                            <source src={bannerVideo} type="video/mp4" />
+                            <p>
+                                Votre navigateur ne prend pas en charge les
+                                vidéos HTML5.
+                            </p>
+                        </video>
+                        <h1>Portfolio de Jules-Langa Matundu</h1>
+                    </div>
                     <section id={styles.about}>
                         <div className={styles['about-container']}>
                             <div className={styles['about-img-container-main']}>
@@ -40,37 +49,6 @@ function AboutSection() {
                                     l&rsquo;objectif de créer des solutions
                                     techniques innovantes et efficaces.
                                 </p>
-                                {/* <p className={styles['about-txt-1']}>
-                                        Bonjour, je m&rsquo;appelle Jules-Langa
-                                        Matundu,
-                                        <br />
-                                        <br />
-                                        Actuellement en alternance au Campus
-                                        Numérique de Montereau, je combine les
-                                        rôles de formateur en réseaux LAN,
-                                        vidéosurveillance et IoT, et de
-                                        développeur d&rsquo;une plateforme de
-                                        e-learning. Je poursuis également mes
-                                        études en informatique à SUPINFO Paris,
-                                        avec une solide expérience en
-                                        développement web, notamment en
-                                        JavaScript.
-                                    </p>
-                                    <p className={styles['about-txt-2']}>
-                                        En parallèle, je suis en train de lancer
-                                        mon auto-entreprise, où je proposerai
-                                        des services en développement web,
-                                        formation et solutions informatiques.
-                                        Mon parcours diversifié dans les
-                                        systèmes, réseaux et développement web
-                                        reflète mon désir d&rsquo;innover et de
-                                        créer des solutions techniques créatives
-                                        et efficaces. <br />
-                                        Prêt à relever de nouveaux défis, je
-                                        mets mon expertise et mes compétences au
-                                        service de projets innovants et
-                                        stimulants.
-                                    </p> */}
                             </div>
                         </div>
                     </section>

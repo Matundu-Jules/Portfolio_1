@@ -2,17 +2,65 @@
 
 .presentation-content {
   width: 100%;
-  min-height: calc(100vh - var(--header-size));
-  padding: 0 2rem;
+  // min-height: calc(100vh - var(--header-size));
 
   display: flex;
   flex-direction: column;
-  justify-content: space-evenly;
+  justify-content: flex-start;
   align-items: center;
 
-  h1 {
+  @include mediaquery(md) {
+    height: calc(100vh - var(--header-size));
+  }
+
+  .video-banner {
+    align-self: start;
+    position: relative;
+    height: 15rem; /* La hauteur est pleine page */
+    width: 100%;
+    overflow: hidden;
+    margin-bottom: 2rem;
+
+    @include mediaquery(md) {
+      height: 22rem;
+    }
+  }
+
+  .video-banner video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: 100%;
+    height: 100%;
+    transform: translate(-50%, -50%);
+    z-index: 0;
+    object-fit: cover; /* Ajuste la vidéo */
+    object-position: 50% 44%;
+    // opacity: 0.2;
+    filter: brightness(70%);
+  }
+
+  .video-banner h1 {
     text-align: center;
-    margin: 2rem 0;
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    font-size: 3rem;
+    z-index: 0;
+    // text-shadow:
+    //   2px 0 #000,
+    //   -2px 0 #000,
+    //   0 2px #000,
+    //   0 -2px #000,
+    //   1px 1px #000,
+    //   -1px -1px #000,
+    //   1px -1px #000,
+    //   -1px 1px #000; /* Pour lisibilité */
   }
 }
 
@@ -20,11 +68,16 @@
 #about {
   width: 100%;
   margin: 0 0;
+  padding: 0 2rem;
 
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+
+  @include mediaquery(md) {
+    height: calc(100% - 22rem);
+  }
 
   h2 {
     margin: 2rem 0;
@@ -60,6 +113,13 @@
       @include mediaquery(md) {
         margin-top: 0;
         margin-right: 4rem;
+      }
+
+      @include mediaquery(lg) {
+        height: 50rem;
+        width: 50rem;
+        min-height: 20rem;
+        min-width: 20rem;
       }
     }
 

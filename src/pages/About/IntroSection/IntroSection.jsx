@@ -5,7 +5,7 @@ function IntroSection() {
         <section id={styles['about-intro']}>
             <div className={styles['about-intro-img-container']}>
                 <img
-                    src="/src/assets/images/img_profil.jpg"
+                    src="/src/assets/images/img_profil.png"
                     alt="Photo de profil"
                     className={styles['about-intro-img']}
                 />
