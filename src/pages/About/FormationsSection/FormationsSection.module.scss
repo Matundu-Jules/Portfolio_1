@@ -1,13 +1,20 @@
+@use "../../../assets/styles/breakpoints" as *;
+
 // DEGREES
-.degrees-container {
+#degrees {
   width: 100%;
   margin: 8rem 0;
-  text-align: center;
 
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+
+  @include mediaquery(md) {
+    margin: 0;
+    padding-top: 10rem;
+    height: 100vh;
+  }
 
   h2 {
     margin-bottom: 4rem;

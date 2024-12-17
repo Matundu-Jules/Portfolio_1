@@ -12,13 +12,13 @@
   align-items: center;
 
   @include mediaquery(md) {
-    padding-top: 8rem;
+    padding-top: 10rem;
     height: calc(100vh - var(--footer-size));
   }
 
   h2 {
     margin: 0;
-    margin-bottom: 2rem;
+    margin-bottom: 4rem;
   }
 
   p {
@@ -27,13 +27,19 @@
     align-items: center;
     width: 100%;
     margin: 1rem 0;
+    transition: all 0.3s ease-in-out;
+  }
 
+  .contact-email,
+  .contact-linkedin,
+  .contact-github,
+  .contact-entreprise {
     &:hover {
       color: var(--link-color);
 
       .logo-contact-digital-challenge {
-        filter: invert(77%) sepia(17%) saturate(1856%) hue-rotate(174deg)
-          brightness(94%) contrast(88%);
+        filter: brightness(0) saturate(100%) invert(98%) sepia(50%)
+          saturate(7025%) hue-rotate(328deg) brightness(98%) contrast(93%);
       }
     }
   }
@@ -54,7 +60,6 @@
     flex-wrap: wrap;
 
     width: 100%;
-    min-height: 20rem;
     margin-bottom: 4rem;
 
     @include mediaquery(md) {
@@ -89,7 +94,7 @@
 
   .contact-text {
     width: 90%;
-    margin: 0 0 4rem 0;
+    margin: 0;
     justify-content: center;
     text-align: center;
   }

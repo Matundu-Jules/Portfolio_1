@@ -1,22 +1,35 @@
-// // CV
-// .cv-container {
-//   margin: 8rem 0;
-//   display: flex;
-//   flex-direction: column;
-//   justify-content: center;
-//   align-items: center;
+@use "../../../assets/styles/breakpoints" as *;
 
-//   .cv-link {
-//     padding: 1rem 2rem;
-//     border: 1px solid var(--link-color);
-//     border-radius: 1rem;
-//     margin-bottom: 0.5rem;
-//     transition: all 0.3s ease-in-out;
-//     justify-self: flex-end;
+// CV
+#cv {
+  margin: 8rem 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 
-//     &:hover {
-//       background: var(--link-color);
-//       color: var(--bg1);
-//     }
-//   }
-// }
+  @include mediaquery(md) {
+    margin: 0;
+    padding-top: 10rem;
+    height: calc(100vh - var(--footer-size));
+  }
+
+  h2 {
+    margin-bottom: 4rem;
+  }
+
+  .cv-link {
+    padding: 1rem 2rem;
+    border: 1px solid var(--link-color);
+    color: var(--link-color);
+    border-radius: 1rem;
+    margin-bottom: 0.5rem;
+    transition: all 0.3s ease-in-out;
+    justify-self: flex-end;
+
+    &:hover {
+      background: var(--link-color);
+      color: var(--bg1);
+    }
+  }
+}

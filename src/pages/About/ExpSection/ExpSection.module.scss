@@ -1,5 +1,7 @@
+@use "../../../assets/styles/breakpoints" as *;
+
 // EXPERIENCES
-.experiences-container {
+#experiences {
   width: 100%;
   min-height: 36rem;
   margin: 8rem 0;
@@ -9,6 +11,12 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+
+  @include mediaquery(md) {
+    margin: 0;
+    padding-top: 10rem;
+    height: 100vh;
+  }
 
   h2 {
     margin-bottom: 4rem;
@@ -22,15 +30,27 @@
     flex-wrap: wrap;
     gap: 2rem;
 
+    @include mediaquery(md) {
+      display: grid;
+      place-content: center;
+      grid-template-columns: repeat(4, 22%);
+    }
+
     .experiences-card {
-      width: 26rem;
-      height: 26rem;
+      width: 22rem;
+      height: 22rem;
+
       position: relative;
       border-radius: 1rem;
       border: 2px solid rgba($color: #000000, $alpha: 0);
       transition:
         border,
         font-weight 0.3s ease-in-out;
+
+      @include mediaquery(md) {
+        width: 100%;
+        // height: auto;
+      }
 
       &:hover {
         border: 2px solid var(--text-color);
@@ -61,7 +81,6 @@
           left: 0;
           width: 100%;
           height: 100%;
-          object-fit: cover;
         }
 
         .exp-card-img {
@@ -70,6 +89,7 @@
           border-radius: 1rem;
           opacity: 0.3;
           object-fit: cover;
+          object-position: 50% 0%;
           transition: opacity 0.3s ease-in-out;
         }
       }

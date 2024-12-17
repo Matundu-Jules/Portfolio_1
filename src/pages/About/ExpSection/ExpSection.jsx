@@ -1,9 +1,15 @@
+import { Element } from 'react-scroll'
 import styles from './ExpSection.module.scss'
 
 function ExpSection() {
     return (
-        <section className={styles['experiences-container']}>
-            <h2>Mes expériences</h2>
+        <Element
+            name="experiences"
+            id={styles['experiences']}
+            role="region"
+            aria-labelledby="experiences-title"
+        >
+            <h2 id="experiences-title">Mes expériences</h2>
             <ul className={styles['experiences-list']}>
                 {[
                     {
@@ -64,7 +70,7 @@ function ExpSection() {
                     </li>
                 ))}
             </ul>
-        </section>
+        </Element>
     )
 }
 

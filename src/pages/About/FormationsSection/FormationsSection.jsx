@@ -1,9 +1,15 @@
+import { Element } from 'react-scroll'
 import styles from './FormationsSection.module.scss'
 
 function FormationsSection() {
     return (
-        <section className={styles['degrees-container']}>
-            <h2>Mes Formations</h2>
+        <Element
+            name="degrees"
+            id={styles.degrees}
+            role="region"
+            aria-labelledby="degrees-title"
+        >
+            <h2 id="degrees-title">Mes Formations</h2>
             <ul>
                 <li>
                     <p>
@@ -46,7 +52,7 @@ function FormationsSection() {
                     </p>
                 </li>
             </ul>
-        </section>
+        </Element>
     )
 }
 

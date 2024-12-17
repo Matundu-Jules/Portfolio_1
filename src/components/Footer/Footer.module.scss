@@ -53,8 +53,8 @@ footer {
       brightness(96%) contrast(90%);
 
     &:hover {
-      filter: invert(77%) sepia(17%) saturate(1856%) hue-rotate(174deg)
-        brightness(94%) contrast(88%);
+      filter: brightness(0) saturate(100%) invert(98%) sepia(50%)
+        saturate(7025%) hue-rotate(328deg) brightness(98%) contrast(93%);
     }
   }
 }

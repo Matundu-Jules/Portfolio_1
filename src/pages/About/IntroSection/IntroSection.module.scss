@@ -6,13 +6,35 @@
   justify-content: center;
   align-items: center;
 
-  margin: 8rem 0;
   width: 100%;
 
-  @include mediaquery("md") {
-    flex-direction: row;
-    justify-content: space-evenly;
-    flex-wrap: wrap;
+  @include mediaquery(md) {
+    height: calc(100vh - var(--header-size));
+  }
+
+  .about-main-title {
+    text-align: center;
+    margin: 4rem;
+
+    @include mediaquery(md) {
+      margin: 0 0 4rem 0;
+    }
+  }
+
+  .about-img-text-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    width: 100%;
+
+    @include mediaquery(md) {
+      flex-direction: row;
+      justify-content: space-evenly;
+      flex-wrap: wrap;
+      margin: 0;
+    }
   }
 
   p {
@@ -24,9 +46,8 @@
     text-align: center;
     padding: 0 2rem;
     width: 100%;
-    height: 100%;
 
-    @include mediaquery("md") {
+    @include mediaquery(md) {
       width: 60%;
     }
   }
