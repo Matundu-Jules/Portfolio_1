@@ -94,9 +94,13 @@
 
   .contact-text {
     width: 90%;
-    margin: 0;
+    margin: 0 0 4rem 0;
     justify-content: center;
     text-align: center;
+
+    @include mediaquery(md) {
+      margin: 0;
+    }
   }
 }
 
