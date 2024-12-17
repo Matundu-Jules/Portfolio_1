@@ -1,7 +1,7 @@
 export default [
     {
         title: 'RailRoad API',
-        image: '/src/assets/images/projects/railroad-api.png',
+        image: '/images/projects/railroad-api.png',
         category: 'Développement Web / API',
         date: '2024-10-20',
         description:
@@ -10,7 +10,7 @@ export default [
     },
     {
         title: 'Application & Site Web CLEM',
-        image: '/src/assets/images/projects/clem.png',
+        image: '/images/projects/clem.png',
         category: 'Développement Web',
         date: '2023-07-15',
         description:
@@ -19,7 +19,7 @@ export default [
     },
     {
         title: 'Home Assistant',
-        image: '/src/assets/images/projects/homeassistant.png',
+        image: '/images/projects/homeassistant.png',
         category: 'IoT',
         date: '2023-06-30',
         description:
@@ -28,7 +28,7 @@ export default [
     },
     {
         title: 'IMC-Calculator',
-        image: '/src/assets/images/projects/imc-calculator.png',
+        image: '/images/projects/imc-calculator.png',
         category: 'Développement Web',
         date: '2024-05-12',
         description:
@@ -37,7 +37,7 @@ export default [
     },
     {
         title: 'Find in Wiki',
-        image: '/src/assets/images/projects/find-in-wiki.png',
+        image: '/images/projects/find-in-wiki.png',
         category: 'Développement Web',
         date: '2024-05-26',
         description:
@@ -46,7 +46,7 @@ export default [
     },
     {
         title: 'Cookie Creator',
-        image: '/src/assets/images/projects/cookie-creator.png',
+        image: '/images/projects/cookie-creator.png',
         category: 'Développement Web',
         date: '2024-05-14',
         description:
@@ -55,7 +55,7 @@ export default [
     },
     {
         title: 'TaskMaster',
-        image: '/src/assets/images/projects/taskMaster.png',
+        image: '/images/projects/TaskMaster.png',
         category: 'Développement Web',
         date: '2024-05-16',
         description:
@@ -65,7 +65,7 @@ export default [
     {
         title: 'Booki',
         subtitle: 'OpenClassrooms P2',
-        image: '/src/assets/images/projects/booki.png',
+        image: '/images/projects/booki.png',
         category: 'Développement Web',
         date: '2022-03-02',
         description:
@@ -75,7 +75,7 @@ export default [
     {
         title: 'Ohmyfood',
         subtitle: 'OpenClassrooms P3',
-        image: '/src/assets/images/projects/ohmyfood.png',
+        image: '/images/projects/ohmyfood.png',
         category: 'Développement Web',
         date: '2022-03-18',
         description:
@@ -85,7 +85,7 @@ export default [
     {
         title: 'La Panthère',
         subtitle: 'OpenClassrooms P4',
-        image: '/src/assets/images/projects/lapanthere.png',
+        image: '/images/projects/lapanthere.png',
         category: 'Développement Web',
         date: '2022-04-18',
         description:
@@ -95,7 +95,7 @@ export default [
     {
         title: 'Kanap',
         subtitle: 'OpenClassrooms P5',
-        image: '/src/assets/images/projects/kanap.png',
+        image: '/images/projects/kanap.png',
         category: 'Développement Web',
         date: '2022-05-25',
         description:
@@ -105,7 +105,7 @@ export default [
     {
         title: 'API Piiquante',
         subtitle: 'OpenClassrooms P6',
-        image: '/src/assets/images/projects/piiquante.png',
+        image: '/images/projects/piiquante.png',
         category: 'Développement Web',
         date: '2022-07-06',
         description:
@@ -115,7 +115,7 @@ export default [
     {
         title: 'Groupomania + API',
         subtitle: 'OpenClassrooms P7',
-        image: '/src/assets/images/projects/groupomania.png',
+        image: '/images/projects/groupomania.png',
         category: 'Développement Web',
         date: '2022-08-20',
         description:
