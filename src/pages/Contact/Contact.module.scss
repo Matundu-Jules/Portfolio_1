@@ -1,0 +1,119 @@
+@use "../../assets/styles/breakpoints" as *;
+
+/* CONTACT */
+#contact {
+  width: 100%;
+  scroll-snap-align: start;
+  margin: var(--header-size) 0 0 0;
+  height: calc(100vh - (var(--footer-size) + var(--header-size)));
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  @include mediaquery(md) {
+    // height: calc(100vh - var(--footer-size));
+  }
+
+  h2 {
+    margin: 0;
+    margin-bottom: 2rem;
+
+    @include mediaquery(md) {
+      margin-bottom: 4rem;
+    }
+  }
+
+  p {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+    margin: 1rem 0;
+    transition: all 0.3s ease-in-out;
+  }
+
+  .contact-email,
+  .contact-linkedin,
+  .contact-github,
+  .contact-entreprise {
+    &:hover {
+      color: var(--link-color);
+
+      .logo-contact-digital-challenge {
+        filter: brightness(0) saturate(100%) invert(98%) sepia(50%)
+          saturate(7025%) hue-rotate(328deg) brightness(98%) contrast(93%);
+      }
+    }
+  }
+
+  // ICONS
+  i {
+    width: 3rem;
+    height: 3rem;
+    margin-right: 1.5rem;
+    font-size: 3rem;
+  }
+
+  .contact-details {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+
+    width: 100%;
+    margin-bottom: 2rem;
+
+    @include mediaquery(md) {
+      flex-direction: row;
+      margin-bottom: 4rem;
+    }
+  }
+
+  .details-container {
+    width: 22.6rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    @include mediaquery(md) {
+      width: auto;
+      margin-right: 8rem;
+    }
+  }
+
+  .socials-container {
+    width: 22.6rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    @include mediaquery(md) {
+      width: auto;
+    }
+  }
+
+  .contact-text {
+    width: 90%;
+    // margin: 0 0 2rem 0;
+    justify-content: center;
+    text-align: center;
+    font-size: 1.4rem;
+
+    @include mediaquery(md) {
+      margin: 0;
+      font-size: 1.6rem;
+    }
+  }
+}
+
+.logo-contact-digital-challenge {
+  background-image: url("../../assets/images/digital-challenge/digital_challenge-logo_noir.svg");
+  background-size: cover;
+  filter: invert(96%) sepia(5%) saturate(268%) hue-rotate(58deg) brightness(96%)
+    contrast(90%);
+}
