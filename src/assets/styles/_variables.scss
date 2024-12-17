@@ -12,8 +12,8 @@
   --test5: #2ecc71;
   --test6: #ffeb3b;
 
-  --bg1: #000c15;
-  --bg2: #001a2b;
+  --bg1: #02040f;
+  --bg2: #050a24;
 
   --font-family: Roboto, Helvetica, Arial, sans-serif;
   --text-color: #f2f5ea;
@@ -31,25 +31,24 @@
   --footer-size: 12rem;
 }
 
-// Mixin
 @mixin bg-gradient() {
-  background: rgb(0, 26, 43);
+  background: rgb(5, 10, 36);
   background: -moz-radial-gradient(
     circle,
-    rgba(0, 26, 43, 1) 0%,
-    rgba(0, 12, 21, 1) 80%
+    rgba(5, 10, 36, 1) 0%,
+    rgba(2, 4, 15, 1) 80%
   );
   background: -webkit-radial-gradient(
     circle,
-    rgba(0, 26, 43, 1) 0%,
-    rgba(0, 12, 21, 1) 80%
+    rgba(5, 10, 36, 1) 0%,
+    rgba(2, 4, 15, 1) 80%
   );
   background: radial-gradient(
     circle,
-    rgba(0, 26, 43, 1) 0%,
-    rgba(0, 12, 21, 1) 80%
+    rgba(5, 10, 36, 1) 0%,
+    rgba(2, 4, 15, 1) 80%
   );
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#001a2b",endColorstr="#000c15",GradientType=1);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#050a24",endColorstr="#02040f",GradientType=1);
 }
 
 body {
